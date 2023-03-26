@@ -1,0 +1,76 @@
+UC Irvine Office of the Registrar
+                      Schedule of Classes    Saturday, March 25, 2023
+
+Search Criteria:
+    Course Code Range: 35870, 35880, 34080, 33010, 34100
+    Exclude cancelled courses
+
+
+Spring Quarter, 2023      Term starts on Wednesday, March 29, 2023
+
+
+   #########################################################################
+   ###                                                                   ###
+   ###                       School of Humanities                        ###
+   ###                                                                   ###
+   #########################################################################
+
+       _________________________________________________________________
+
+                                   Writing
+       _________________________________________________________________
+
+Writing  30        BEG POETRY WRITING
+    CCode Typ Sec Unt Instructor    Time              Place     Final                      Max     Enr      WL Req Rstr Status 
+    33010 SEM A   4   NGUYEN, L.    TuTh  9:30-10:50  SSL 117   Thu, Jun 15, 8:00-10:00am   16      16     n/a  42 A    FULL   
+                      SCHULTZ, R.                                                                                              
+
+
+   #########################################################################
+   ###                                                                   ###
+   ###      Donald Bren School of Information and Computer Sciences      ###
+   ###                                                                   ###
+   #########################################################################
+
+       _________________________________________________________________
+
+                              Computer Science
+       _________________________________________________________________
+
+CompSci  125       NXT GEN SRCH SYSTMS
+    CCode Typ Sec Unt Instructor    Time              Place     Final                      Max     Enr      WL Req Rstr Status 
+    34080 LEC A   4   IBRAHIM, M.   TuTh  8:00- 9:20  SSPA 1100 Tue, Jun 13, 8:00-10:00am  120     120      17 231 A    Waitl  
+
+CompSci  132       COMPUTER NETWORKS
+    CCode Typ Sec Unt Instructor    Time              Place     Final                      Max     Enr      WL Req Rstr Status 
+    34100 LEC A   4   LI, Z.        TuTh  2:00- 3:20p SSH 100   Thu, Jun 15, 1:30-3:30pm   250 165/245     n/a 211 A    OPEN   
+      ~ Same as 16615 (EECS 148, Lec A).
+
+       _________________________________________________________________
+
+                      Information and Computer Science
+       _________________________________________________________________
+
+I&C Sci  139W      CRITICAL WRITING
+    CCode Typ Sec Unt Instructor    Time              Place     Final                      Max     Enr      WL Req Rstr Status 
+    35870 LEC A   4   DENENBERG, D. MW   11:00-12:20p SSL 270   Tue, Jun 13, 1:30-3:30pm    80      79     n/a 126 J&N  OPEN   
+    35880 LEC B   4   DENENBERG, D. MW    2:00- 3:20p SSL 270   Wed, Jun 14, 10:30-12:30pm  80      80     n/a 123 J&N  FULL   
+
+
+*** Total Classes Displayed: 5
+    Values in the "Enr" column like "165/245" show "section / joint" enrollment
+        totals for cross-listed courses.
+    Course "New-Only Reservations" (NOR) for new students have been turned off for this term.
+    The column headings above are defined at:
+            https://www.reg.uci.edu/help/WebSoc-Columns.shtml
+    Course textbooks link:
+            http://uci.bncollege.com
+    Building Abbreviations:
+            https://www.reg.uci.edu/uci/rooms
+    Campus map:
+            http://www.uci.edu/campusmap
+
+Restriction Codes from the 'Rst' column above:
+    A: Prerequisite required
+    J: Upper-division only
+    N: School major only

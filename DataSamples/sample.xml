@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<!DOCTYPE websoc_results SYSTEM "https://www.reg.uci.edu/css/xml/WebSocResults.dtd">
+<websoc_results  get_parm="YearTerm=2023-14&amp;ShowFinals=1&amp;CourseCodes=35870%2C%2035880%2C%2034080%2C%2033010%2C%2034100" generated="2023-03-25/11:04:19" author="UC Irvine Registrar Office">
+    <search_criteria>
+        <criterion>Course Code Range: 35870, 35880, 34080, 33010, 34100</criterion>
+        <criterion>Exclude cancelled courses</criterion>
+    </search_criteria>
+    <term>
+        <term_yyyyst>202314</term_yyyyst>
+        <term_year>2023</term_year>
+        <term_name>Spring Quarter</term_name>
+        <term_status_msg>Term starts on Wednesday, March 29, 2023</term_status_msg>
+    </term>
+    <course_list>
+        <school  school_code="60"  school_name="School of Humanities">
+            <department  dept_code="WRITING"  dept_case="Writing"  dept_name="Writing">
+                <course  course_number="30"  course_title="BEG POETRY WRITING">
+                    <course_prereq_link>https://www.reg.uci.edu/cob/prrqcgi?term=202314&amp;dept=WRITING&amp;action=view_by_term#30</course_prereq_link>
+                    <section>
+                        <course_code>33010</course_code>
+                        <sec_type>Sem</sec_type>
+                        <sec_num>A</sec_num>
+                        <sec_units>4</sec_units>
+                        <sec_instructors>
+                            <instructor>NGUYEN, L.</instructor>
+                            <instructor>SCHULTZ, R.</instructor>
+                        </sec_instructors>
+                        <sec_meetings>
+                            <sec_meet>
+                                <sec_days>TuTh</sec_days>
+                                <sec_time> 9:30-10:50 </sec_time>
+                                <sec_bldg>SSL</sec_bldg>
+                                <sec_room>117</sec_room>
+                                <sec_room_link>https://classrooms.uci.edu/classroomtechnology/classrooms/ssl/ssl-117</sec_room_link>
+                            </sec_meet>
+                        </sec_meetings>
+                        <sec_final>
+                            <sec_final_date>Jun 15</sec_final_date>
+                            <sec_final_day>Thu</sec_final_day>
+                            <sec_final_time>8:00-10:00am</sec_final_time>
+                        </sec_final>
+                        <sec_enrollment>
+                            <sec_max_enroll>16</sec_max_enroll>
+                            <sec_enrolled>16</sec_enrolled>
+                            <sec_enroll_requests>42</sec_enroll_requests>
+                            <sec_new_only_reserved>33010</sec_new_only_reserved>
+                            <sec_waitlist>n/a</sec_waitlist>
+                            <sec_wait_cap>0</sec_wait_cap>
+                        </sec_enrollment>
+                        <sec_restrictions>A</sec_restrictions>
+                        <sec_books>http://uci.bncollege.com</sec_books>
+                        <sec_graded>1</sec_graded>
+                        <sec_linkage>
+                            <sec_backward_ptr>00000</sec_backward_ptr>
+                            <sec_group_backward_ptr>00000</sec_group_backward_ptr>
+                            <sec_forward_ptr>33012</sec_forward_ptr>
+                            <sec_group_forward_ptr>00000</sec_group_forward_ptr>
+                        </sec_linkage>
+                        <sec_status>FULL</sec_status>
+                        <sec_active>1</sec_active>
+                    </section>
+                </course>
+            </department>
+        </school>
+        <school  school_code="95"  school_name="Donald Bren School of Information and Computer Sciences">
+            <department  dept_code="COMPSCI"  dept_case="CompSci"  dept_name="Computer Science">
+                <course  course_number="125"  course_title="NXT GEN SRCH SYSTMS">
+                    <course_prereq_link>https://www.reg.uci.edu/cob/prrqcgi?term=202314&amp;dept=COMPSCI&amp;action=view_by_term#125</course_prereq_link>
+                    <section>
+                        <course_code>34080</course_code>
+                        <sec_type>Lec</sec_type>
+                        <sec_num>A</sec_num>
+                        <sec_units>4</sec_units>
+                        <sec_instructors>
+                            <instructor>IBRAHIM, M.</instructor>
+                        </sec_instructors>
+                        <sec_meetings>
+                            <sec_meet>
+                                <sec_days>TuTh</sec_days>
+                                <sec_time> 8:00- 9:20 </sec_time>
+                                <sec_bldg>SSPA</sec_bldg>
+                                <sec_room>1100</sec_room>
+                                <sec_room_link>https://classrooms.uci.edu/classroomtechnology/classrooms/sspa/sspa-1100</sec_room_link>
+                            </sec_meet>
+                        </sec_meetings>
+                        <sec_final>
+                            <sec_final_date>Jun 13</sec_final_date>
+                            <sec_final_day>Tue</sec_final_day>
+                            <sec_final_time>8:00-10:00am</sec_final_time>
+                        </sec_final>
+                        <sec_enrollment>
+                            <sec_max_enroll>120</sec_max_enroll>
+                            <sec_enrolled>120</sec_enrolled>
+                            <sec_enroll_requests>231</sec_enroll_requests>
+                            <sec_new_only_reserved>34080</sec_new_only_reserved>
+                            <sec_waitlist>17</sec_waitlist>
+                            <sec_wait_cap>18</sec_wait_cap>
+                        </sec_enrollment>
+                        <sec_restrictions>A</sec_restrictions>
+                        <sec_books>http://uci.bncollege.com</sec_books>
+                        <sec_graded>1</sec_graded>
+                        <sec_linkage>
+                            <sec_backward_ptr>00000</sec_backward_ptr>
+                            <sec_group_backward_ptr>00000</sec_group_backward_ptr>
+                            <sec_forward_ptr>00000</sec_forward_ptr>
+                            <sec_group_forward_ptr>00000</sec_group_forward_ptr>
+                        </sec_linkage>
+                        <sec_status>Waitl</sec_status>
+                        <sec_active>1</sec_active>
+                    </section>
+                </course>
+                <course  course_number="132"  course_title="COMPUTER NETWORKS">
+                    <course_prereq_link>https://www.reg.uci.edu/cob/prrqcgi?term=202314&amp;dept=COMPSCI&amp;action=view_by_term#132</course_prereq_link>
+                    <section>
+                        <course_code>34100</course_code>
+                        <sec_type>Lec</sec_type>
+                        <sec_num>A</sec_num>
+                        <sec_units>4</sec_units>
+                        <sec_instructors>
+                            <instructor>LI, Z.</instructor>
+                        </sec_instructors>
+                        <sec_meetings>
+                            <sec_meet>
+                                <sec_days>TuTh</sec_days>
+                                <sec_time> 2:00- 3:20p</sec_time>
+                                <sec_bldg>SSH</sec_bldg>
+                                <sec_room>100</sec_room>
+                                <sec_room_link>https://classrooms.uci.edu/classroomtechnology/classrooms/ssh/ssh-100</sec_room_link>
+                            </sec_meet>
+                        </sec_meetings>
+                        <sec_final>
+                            <sec_final_date>Jun 15</sec_final_date>
+                            <sec_final_day>Thu</sec_final_day>
+                            <sec_final_time>1:30-3:30pm</sec_final_time>
+                        </sec_final>
+                        <sec_enrollment>
+                            <sec_max_enroll>250</sec_max_enroll>
+                            <sec_enrolled>245</sec_enrolled>
+                            <sec_enroll_requests>211</sec_enroll_requests>
+                            <sec_new_only_reserved>34100</sec_new_only_reserved>
+                            <sec_waitlist>n/a</sec_waitlist>
+                            <sec_wait_cap>0</sec_wait_cap>
+                            <sec_xlist_subenrolled>165</sec_xlist_subenrolled>
+                        </sec_enrollment>
+                        <sec_restrictions>A</sec_restrictions>
+                        <sec_books>http://uci.bncollege.com</sec_books>
+                        <sec_graded>1</sec_graded>
+                        <sec_linkage>
+                            <sec_backward_ptr>00000</sec_backward_ptr>
+                            <sec_group_backward_ptr>00000</sec_group_backward_ptr>
+                            <sec_forward_ptr>00000</sec_forward_ptr>
+                            <sec_group_forward_ptr>34101</sec_group_forward_ptr>
+                        </sec_linkage>
+                        <sec_status>OPEN</sec_status>
+                        <sec_cross_list>
+                            <cross_course_code>16615</cross_course_code>
+                        </sec_cross_list>
+                        <sec_active>1</sec_active>
+                        <sec_comment><![CDATA[
+                            <p>Same as 16615 (EECS 148, Lec A).</p>
+                            ]]>
+                        </sec_comment>
+                    </section>
+                </course>
+            </department>
+            <department  dept_code="I&amp;C SCI"  dept_case="I&amp;C Sci"  dept_name="Information and Computer Science">
+                <course  course_number="139W"  course_title="CRITICAL WRITING">
+                    <course_prereq_link>https://www.reg.uci.edu/cob/prrqcgi?term=202314&amp;dept=I%26C%20SCI&amp;action=view_by_term#139W</course_prereq_link>
+                    <section>
+                        <course_code>35870</course_code>
+                        <sec_type>Lec</sec_type>
+                        <sec_num>A</sec_num>
+                        <sec_units>4</sec_units>
+                        <sec_instructors>
+                            <instructor>DENENBERG, D.</instructor>
+                        </sec_instructors>
+                        <sec_meetings>
+                            <sec_meet>
+                                <sec_days>MW</sec_days>
+                                <sec_time>11:00-12:20p</sec_time>
+                                <sec_bldg>SSL</sec_bldg>
+                                <sec_room>270</sec_room>
+                                <sec_room_link>https://classrooms.uci.edu/classroomtechnology/classrooms/ssl/ssl-270</sec_room_link>
+                            </sec_meet>
+                        </sec_meetings>
+                        <sec_final>
+                            <sec_final_date>Jun 13</sec_final_date>
+                            <sec_final_day>Tue</sec_final_day>
+                            <sec_final_time>1:30-3:30pm</sec_final_time>
+                        </sec_final>
+                        <sec_enrollment>
+                            <sec_max_enroll>80</sec_max_enroll>
+                            <sec_enrolled>79</sec_enrolled>
+                            <sec_enroll_requests>126</sec_enroll_requests>
+                            <sec_new_only_reserved>35870</sec_new_only_reserved>
+                            <sec_waitlist>n/a</sec_waitlist>
+                            <sec_wait_cap>0</sec_wait_cap>
+                        </sec_enrollment>
+                        <sec_restrictions>J and N</sec_restrictions>
+                        <sec_books>http://uci.bncollege.com</sec_books>
+                        <sec_graded>1</sec_graded>
+                        <sec_linkage>
+                            <sec_backward_ptr>00000</sec_backward_ptr>
+                            <sec_group_backward_ptr>00000</sec_group_backward_ptr>
+                            <sec_forward_ptr>00000</sec_forward_ptr>
+                            <sec_group_forward_ptr>35871</sec_group_forward_ptr>
+                        </sec_linkage>
+                        <sec_status>OPEN</sec_status>
+                        <sec_active>1</sec_active>
+                    </section>
+                    <section>
+                        <course_code>35880</course_code>
+                        <sec_type>Lec</sec_type>
+                        <sec_num>B</sec_num>
+                        <sec_units>4</sec_units>
+                        <sec_instructors>
+                            <instructor>DENENBERG, D.</instructor>
+                        </sec_instructors>
+                        <sec_meetings>
+                            <sec_meet>
+                                <sec_days>MW</sec_days>
+                                <sec_time> 2:00- 3:20p</sec_time>
+                                <sec_bldg>SSL</sec_bldg>
+                                <sec_room>270</sec_room>
+                                <sec_room_link>https://classrooms.uci.edu/classroomtechnology/classrooms/ssl/ssl-270</sec_room_link>
+                            </sec_meet>
+                        </sec_meetings>
+                        <sec_final>
+                            <sec_final_date>Jun 14</sec_final_date>
+                            <sec_final_day>Wed</sec_final_day>
+                            <sec_final_time>10:30-12:30pm</sec_final_time>
+                        </sec_final>
+                        <sec_enrollment>
+                            <sec_max_enroll>80</sec_max_enroll>
+                            <sec_enrolled>80</sec_enrolled>
+                            <sec_enroll_requests>123</sec_enroll_requests>
+                            <sec_new_only_reserved>35880</sec_new_only_reserved>
+                            <sec_waitlist>n/a</sec_waitlist>
+                            <sec_wait_cap>0</sec_wait_cap>
+                        </sec_enrollment>
+                        <sec_restrictions>J and N</sec_restrictions>
+                        <sec_books>http://uci.bncollege.com</sec_books>
+                        <sec_graded>1</sec_graded>
+                        <sec_linkage>
+                            <sec_backward_ptr>35870</sec_backward_ptr>
+                            <sec_group_backward_ptr>00000</sec_group_backward_ptr>
+                            <sec_forward_ptr>00000</sec_forward_ptr>
+                            <sec_group_forward_ptr>35881</sec_group_forward_ptr>
+                        </sec_linkage>
+                        <sec_status>FULL</sec_status>
+                        <sec_active>1</sec_active>
+                    </section>
+                </course>
+            </department>
+        </school>
+    </course_list>
+    <restriction_codes>
+        <restriction>
+            <restriction_code>A</restriction_code>  <restriction_def>Prerequisite required</restriction_def>
+        </restriction>
+        <restriction>
+            <restriction_code>J</restriction_code>  <restriction_def>Upper-division only</restriction_def>
+        </restriction>
+        <restriction>
+            <restriction_code>N</restriction_code>  <restriction_def>School major only</restriction_def>
+        </restriction>
+    </restriction_codes>
+</websoc_results>

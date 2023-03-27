@@ -6,21 +6,27 @@ class WebSocTest(unittest.TestCase):
     def test_init_class_test(self) -> None:
         options = {
             'YearTerm': None,
-            'Breadth': 'ANY',
+            'ShowComments': 'on',
             'ShowFinals': 'on',
+            'Online': None,
+            'Breadth': 'ANY',
             'Dept': 'ALL',
+            'CourseNum': None,
+            'Division': 'ANY',
             'CourseCodes': None,
-            'CourseNum ': None,
-            'Division': 'ALL',
-            'InstrName ': None,
+            'InstrName': None,
             'CourseTitle': None,
-            'ClassType ': 'ALL',
+            'ClassType': 'ALL',
             'Units': None,
             'Days': None,
             'StartTime': None,
             'EndTime': None,
+            'MaxCap': None,
             'FullCourses': 'ANY',
+            'FontSize': None,
             'CancelledCourses': 'Exclude',
+            'Bldg': None,
+            'Room': None,
             'Submit': 'XML'
         }
         w = WebSoc.WebSoc()
@@ -30,21 +36,27 @@ class WebSocTest(unittest.TestCase):
     def test_change_option(self) -> None:
         options = {
             'YearTerm': '2023-14',
-            'Breadth': 'ANY',
+            'ShowComments': 'on',
             'ShowFinals': 'off',
+            'Online': None,
+            'Breadth': 'ANY',
             'Dept': 'ALL',
+            'CourseNum': None,
+            'Division': 'ANY',
             'CourseCodes': '12345, 67890, 12333, 30303, 77777, 44444',
-            'CourseNum ': None,
-            'Division': 'ALL',
-            'InstrName ': None,
+            'InstrName': None,
             'CourseTitle': None,
-            'ClassType ': 'ALL',
+            'ClassType': 'ALL',
             'Units': 4,
             'Days': None,
             'StartTime': None,
             'EndTime': None,
+            'MaxCap': None,
             'FullCourses': 'ANY',
+            'FontSize': None,
             'CancelledCourses': 'Exclude',
+            'Bldg': None,
+            'Room': None,
             'Submit': 'XML'
         }
         w = WebSoc.WebSoc()
@@ -59,12 +71,13 @@ class WebSocTest(unittest.TestCase):
     def test_remove_none(self) -> None:
         options = {
             'YearTerm': '2023-14',
-            'Breadth': 'ANY',
+            'ShowComments': 'on',
             'ShowFinals': 'None',
+            'Breadth': 'ANY',
             'Dept': 'ALL',
+            'Division': 'ANY',
             'CourseCodes': '12345, 67890, 12333, 30303, 77777, 44444',
-            'Division': 'ALL',
-            'ClassType ': 'ALL',
+            'ClassType': 'ALL',
             'FullCourses': 'ANY',
             'CancelledCourses': 'Exclude',
             'Submit': 'XML'

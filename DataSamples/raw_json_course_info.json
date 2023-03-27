@@ -1,0 +1,383 @@
+{
+  "websoc_results": {
+    "@get_parm": "YearTerm=2023-14&ShowFinals=1&ShowComments=1&CourseCodes=34010%2C%2034040%2C%2035870%2C%2035880%2C%2034080%2C%2033010%2C%2034100",
+    "@generated": "2023-03-27/08:51:51",
+    "@author": "UC Irvine Registrar Office",
+    "search_criteria": {
+      "criterion": [
+        "Course Code Range: 34010, 34040, 35870, 35880, 34080, 33010, 34100",
+        "Exclude cancelled courses"
+      ]
+    },
+    "term": {
+      "term_yyyyst": "202314",
+      "term_year": "2023",
+      "term_name": "Spring Quarter",
+      "term_status_msg": "Term starts on Wednesday, March 29, 2023"
+    },
+    "course_list": {
+      "school": [
+        {
+          "@school_code": "60",
+          "@school_name": "School of Humanities",
+          "school_comment": "<p><b>DROP:</b> The deadline to drop courses in the School of Humanities is the end of Week 2 by 5:00PM. Drops can be made in WebReg.</p>\n\t\t<p><b>CHANGE:</b> The deadline to change grade option or variable units is the end of Week 2 by 5:00PM. Changes can be made in WebReg.</p>\n\t\t<p><b>ADD:</b> The deadline to add courses in the School of Humanities is the end of week 2 by 5:00PM. Adds can be made in WebReg.</p>\n\t\t<p>Any exception to the add or drop deadline must be requested as an Enrollment Exception via the online StudentAccess system after second week for DROPs and ADDs and requires approval of the Undergraduate Dean. For more information, please visit <a href=\"http://www.humanities.uci.edu/undergrad/students/add_drop.php\">http://www.humanities.uci.edu/undergrad/students/add_drop.php</a>.</p>\n\t\t<p><b>PREREQUISITES:</b></p>\n\t\t<p>If you satisfied prerequisites for a course at another college, you must contact your academic counseling office to activate your eligibility to enroll in the course. School of Humanities majors can submit requests via the on-line Course Authorization Form available at  <a href=\"http://www.humanities.uci.edu/undergrad/students/forms.php\">http://www.humanities.uci.edu/undergrad/students/forms.php</a>.</p>",
+          "department": {
+            "@dept_code": "WRITING",
+            "@dept_case": "Writing",
+            "@dept_name": "Writing",
+            "department_comment": "<p><b>PLEASE BE ADVISED</b></p>\n\t\t    <p>Writing courses will have a &quot;B&quot; or &quot;X&quot; restriction starting on the first day of instruction. Students will need to contact the instructor to obtain an authorization code to add, drop, or change the grading option for the class.</p>\n\t\t    <p>Waitlists for Writing courses will not be activated.</p>\n\t\t    <p><b>ADD/DROP Policy during the FIRST and SECOND week of Instruction for Composition Courses.</b></p>\n\t\t    <p><b>Students who are permitted to add or drop a Writing Course after the first day of instruction must obtain an authorization code from the instructor of the section. Students WILL NOT be authorized to add a Writing Course after week 1.</b></p>\n\t\t    <p><b>After the second week of the term students will no longer be permitted to drop except through petition.</b></p>\n\t\t    <p><b>Students enrolled in Entry-Level and Lower-Division Writing courses are REQUIRED TO ATTEND THE ENTIRE FIRST CLASS MEETING. Enrolled students who do not show up on the first day WILL BE DROPPED from the instructor's roll and their spot will be given away. These students will still be required to formally drop the course.</b></p>\n\t\t    <p><b>For more information about Composition courses and prerequisites, visit the Program website: <a href=\"http://www.humanities.uci.edu/comp/\">http://www.humanities.uci.edu/comp/</a></b></p>",
+            "course": {
+              "@course_number": "30",
+              "@course_title": "BEG POETRY WRITING",
+              "course_prereq_link": "https://www.reg.uci.edu/cob/prrqcgi?term=202314&dept=WRITING&action=view_by_term#30",
+              "section": {
+                "course_code": "33010",
+                "sec_type": "Sem",
+                "sec_num": "A",
+                "sec_units": "4",
+                "sec_instructors": {
+                  "instructor": ["NGUYEN, L.", "SCHULTZ, R."]
+                },
+                "sec_meetings": {
+                  "sec_meet": {
+                    "sec_days": "TuTh",
+                    "sec_time": "9:30-10:50",
+                    "sec_bldg": "SSL",
+                    "sec_room": "117",
+                    "sec_room_link": "https://classrooms.uci.edu/classroomtechnology/classrooms/ssl/ssl-117"
+                  }
+                },
+                "sec_final": {
+                  "sec_final_date": "Jun 15",
+                  "sec_final_day": "Thu",
+                  "sec_final_time": "8:00-10:00am"
+                },
+                "sec_enrollment": {
+                  "sec_max_enroll": "16",
+                  "sec_enrolled": "16",
+                  "sec_enroll_requests": "42",
+                  "sec_new_only_reserved": "33010",
+                  "sec_waitlist": "n/a",
+                  "sec_wait_cap": "0"
+                },
+                "sec_restrictions": "A",
+                "sec_books": "http://uci.bncollege.com",
+                "sec_graded": "1",
+                "sec_linkage": {
+                  "sec_backward_ptr": "00000",
+                  "sec_group_backward_ptr": "00000",
+                  "sec_forward_ptr": "33012",
+                  "sec_group_forward_ptr": "00000"
+                },
+                "sec_status": "FULL",
+                "sec_active": "1"
+              }
+            }
+          }
+        },
+        {
+          "@school_code": "95",
+          "@school_name": "Donald Bren School of Information and Computer Sciences",
+          "school_comment": "<p>For ICS course updates, visit the ICS Course Updates webpage:</p>\n\t\t<p><b>Undergraduate courses:</b> <a href=\"http://www.ics.uci.edu/ugrad/sao/Course_updates.php\">http://www.ics.uci.edu/ugrad/sao/Course_updates.php</a></p>\n\t\t<p><b>Graduate courses:</b> <a href=\"http://ics.uci.edu/grad/Course_updates.php\">http://ics.uci.edu/grad/Course_updates.php</a></p>\n\t\t<p>It is incumbent <i>on the student</i> to check the restriction status and seating availability of a course <i>before</i> adding or attempting to make changes to their study list.</p>\n\t\t<p><b>COURSE PREREQUISITES ARE STRICTLY ENFORCED.</b> The School of ICS <b>WILL DROP</b> students who do not meet the required course. <i>These drops may take place at any time after grades are posted until Friday of Week 2.</i> Note that meeting the prerequisites for a course does not guarantee a seat in that course.</p>\n\t\t<p><b>WAITLIST:</b> Students waitlisted for any ICS course should be in communication with that course's instructor to arrange for access to course materials and submission of any assignments while on the waitlist. Being on the waitlist or completing coursework DOES NOT guarantee a set in the course.</p>\n\t\t<p><b>DEADLINES TO ADD/DROP/CHANGE GRADE OPTION FOR ALL SCHOOL OF ICS COURSES</b></p>\n\t\t<p><b>5:00pm on Friday of Week 1:</b> Courses with an early deadline to add/drop/change grade option are noted with a comment in the Schedule of Classes. Permission from the instructor and an authorization code will be required after Week 1 to add or drop these courses.</p>\n\t\t<p><b>5:00pm on Friday of Week 2:</b> The deadline to add/drop/change grade option in WebReg is 5:00pm on Friday, April 14, 2023. The Bren Schol of ICS <i>strictly</i> adheres to and enforces this deadline for both undergraduate and graduate courses.</p>\n\t\t<p><b>ADDING, DROPPING, OR CHANGING GRADE OPTION AFTER WEEK 2:</b> Students must submit an Enrollment Exception request online through StudentAccess. <i>Exception requests will only be approved for extenuating and documented circumstances outside of the student's control.</i> <b>For more information on ICS policies:</b> <a href=\"http://www.ics.uci.edu/ugrad/policies/Add_Drop_ChangeOption.php\">http://www.ics.uci.edu/ugrad/policies/Add_Drop_ChangeOption.php</a></p>\n\t\t<p><b>GRADUATE STUDENT ENROLLMENT IN UNDERGRADUATE COURSES:</b> Graduate students seeking to enroll in an ICS undergraduate level course must submit a request to ICS Undergraduate Students Affairs. Priority for seating in undergraduate courses is given first to undergraduate students. Unauthorized students found enrolled in undergraduate courses WILL BE DROPPED by ICS Student Affairs.</p>\n\t\t<p><b>UNDERGRADUATE ENROLLMENT IN GRADUATE COURSES:</b> Undergraduate students seeking to enroll in an ICS graduate level course must obtain a written permission from the instructor before submitting a request for an authorization to ICS Graduate Student Affairs. Priority for seating in graduate courses is given first to graduate students. <i>Graduate level courses taken as an undergraduate will not count toward a graduate degree program.</i></p>\n\t\t<p><b>DCE CONCURRENT ENROLLMENT:</b> Only courses that show as &quot;OPEN&quot; in the Schedule of Classes may be requested. Approval of requests is contingent on seating availability and prerequisite eligibility. For more information: <a href=\"http://www.ics.uci.edu/ugrad/sao/Concurrent_Enrollment.php\">http://www.ics.uci.edu/ugrad/sao/Concurrent_Enrollment.php</a></p>",
+          "department": [
+            {
+              "@dept_code": "COMPSCI",
+              "@dept_case": "CompSci",
+              "@dept_name": "Computer Science",
+              "department_comment": "<p><b> RESTRICTIONS:</b> COMPSCI courses will initially be restricted to majors in the Donald Bren School of Information and Computer Sciences ONLY. Some courses will be additionally restricted to specific majors or level(s) of standing. <b>For restriction details and timeline:</b> <a href=\"http://www.ics.uci.edu/ugrad/sao/Course_updates.php\">http://www.ics.uci.edu/ugrad/sao/Course_updates.php</a></p>\n\t\t    <p><b>WAITLIST:</b> Students waitlisted for any ICS course should be in communication with that course's instructor to arrange for access to course materials and submission of any assignments while on the waitlist. Being on the waitlist or completing coursework DOES NOT guarantee a seat in the course.</p>\n\t\t    <p><b>DISCUSSION &amp; LABS:</b> Discussion and lab sections begin meeting AFTER the first lecture unless otherwise specified by the course instructor. Always check for messages from your instructors before the start of instruction.</p>\n\t\t    <p>Some lab sections are scheduled in laptop instructional labs, ICS 364A, ICS2 162, or ICS2 170. Students enrolled in these labs are required to bring a personal laptop to class meetings.</p>\n\t\t    <p><b>B or X Restricted Courses:</b> Courses with a B or X restriction require an authorization code from the instructor to enroll.</p>",
+              "course": [
+                {
+                  "@course_number": "111",
+                  "@course_title": "DIGITAL IMAGE PROC",
+                  "course_prereq_link": "https://www.reg.uci.edu/cob/prrqcgi?term=202314&dept=COMPSCI&action=view_by_term#111",
+                  "section": {
+                    "course_code": "34010",
+                    "sec_type": "Lec",
+                    "sec_num": "A",
+                    "sec_units": "4",
+                    "sec_instructors": { "instructor": "MAJUMDER, A." },
+                    "sec_meetings": {
+                      "sec_meet": {
+                        "sec_days": "Tu",
+                        "sec_time": "5:00- 7:50p",
+                        "sec_bldg": "SE",
+                        "sec_room": "101",
+                        "sec_room_link": "https://classrooms.uci.edu/classroomtechnology/classrooms/se/se-101"
+                      }
+                    },
+                    "sec_final": {
+                      "sec_final_date": "Jun 15",
+                      "sec_final_day": "Thu",
+                      "sec_final_time": "4:00-6:00pm"
+                    },
+                    "sec_enrollment": {
+                      "sec_max_enroll": "30",
+                      "sec_enrolled": "14",
+                      "sec_enroll_requests": "38",
+                      "sec_new_only_reserved": "34010",
+                      "sec_waitlist": "0",
+                      "sec_wait_cap": "5"
+                    },
+                    "sec_restrictions": "A",
+                    "sec_books": "http://uci.bncollege.com",
+                    "sec_graded": "1",
+                    "sec_linkage": {
+                      "sec_backward_ptr": "00000",
+                      "sec_group_backward_ptr": "00000",
+                      "sec_forward_ptr": "00000",
+                      "sec_group_forward_ptr": "34011"
+                    },
+                    "sec_status": "OPEN",
+                    "sec_active": "1"
+                  }
+                },
+                {
+                  "@course_number": "121",
+                  "@course_title": "INFRMTION RETRIEVAL",
+                  "course_prereq_link": "https://www.reg.uci.edu/cob/prrqcgi?term=202314&dept=COMPSCI&action=view_by_term#121",
+                  "section": {
+                    "course_code": "34040",
+                    "sec_type": "Lec",
+                    "sec_num": "A",
+                    "sec_units": "4",
+                    "sec_instructors": { "instructor": "KRONE MARTINS, A." },
+                    "sec_meetings": {
+                      "sec_meet": {
+                        "sec_days": "MWF",
+                        "sec_time": "9:00- 9:50",
+                        "sec_bldg": "HSLH",
+                        "sec_room": "100A",
+                        "sec_room_link": "https://classrooms.uci.edu/classroomtechnology/classrooms/hslh/hslh-100a"
+                      }
+                    },
+                    "sec_final": {
+                      "sec_final_date": "Jun 14",
+                      "sec_final_day": "Wed",
+                      "sec_final_time": "8:00-10:00am"
+                    },
+                    "sec_enrollment": {
+                      "sec_max_enroll": "250",
+                      "sec_enrolled": "237",
+                      "sec_enroll_requests": "332",
+                      "sec_new_only_reserved": "34040",
+                      "sec_waitlist": "0",
+                      "sec_wait_cap": "38",
+                      "sec_xlist_subenrolled": "177"
+                    },
+                    "sec_restrictions": "A",
+                    "sec_books": "http://uci.bncollege.com",
+                    "sec_graded": "1",
+                    "sec_linkage": {
+                      "sec_backward_ptr": "00000",
+                      "sec_group_backward_ptr": "00000",
+                      "sec_forward_ptr": "00000",
+                      "sec_group_forward_ptr": "34041"
+                    },
+                    "sec_status": "OPEN",
+                    "sec_cross_list": { "cross_course_code": "36150" },
+                    "sec_active": "1",
+                    "sec_comment": "<p>Same as 36150 (In4matx 141, Lec A).</p>"
+                  }
+                },
+                {
+                  "@course_number": "125",
+                  "@course_title": "NXT GEN SRCH SYSTMS",
+                  "course_prereq_link": "https://www.reg.uci.edu/cob/prrqcgi?term=202314&dept=COMPSCI&action=view_by_term#125",
+                  "section": {
+                    "course_code": "34080",
+                    "sec_type": "Lec",
+                    "sec_num": "A",
+                    "sec_units": "4",
+                    "sec_instructors": { "instructor": "IBRAHIM, M." },
+                    "sec_meetings": {
+                      "sec_meet": {
+                        "sec_days": "TuTh",
+                        "sec_time": "8:00- 9:20",
+                        "sec_bldg": "SSPA",
+                        "sec_room": "1100",
+                        "sec_room_link": "https://classrooms.uci.edu/classroomtechnology/classrooms/sspa/sspa-1100"
+                      }
+                    },
+                    "sec_final": {
+                      "sec_final_date": "Jun 13",
+                      "sec_final_day": "Tue",
+                      "sec_final_time": "8:00-10:00am"
+                    },
+                    "sec_enrollment": {
+                      "sec_max_enroll": "120",
+                      "sec_enrolled": "120",
+                      "sec_enroll_requests": "231",
+                      "sec_new_only_reserved": "34080",
+                      "sec_waitlist": "17",
+                      "sec_wait_cap": "18"
+                    },
+                    "sec_restrictions": "A",
+                    "sec_books": "http://uci.bncollege.com",
+                    "sec_graded": "1",
+                    "sec_linkage": {
+                      "sec_backward_ptr": "00000",
+                      "sec_group_backward_ptr": "00000",
+                      "sec_forward_ptr": "00000",
+                      "sec_group_forward_ptr": "00000"
+                    },
+                    "sec_status": "Waitl",
+                    "sec_active": "1"
+                  }
+                },
+                {
+                  "@course_number": "132",
+                  "@course_title": "COMPUTER NETWORKS",
+                  "course_prereq_link": "https://www.reg.uci.edu/cob/prrqcgi?term=202314&dept=COMPSCI&action=view_by_term#132",
+                  "section": {
+                    "course_code": "34100",
+                    "sec_type": "Lec",
+                    "sec_num": "A",
+                    "sec_units": "4",
+                    "sec_instructors": { "instructor": "LI, Z." },
+                    "sec_meetings": {
+                      "sec_meet": {
+                        "sec_days": "TuTh",
+                        "sec_time": "2:00- 3:20p",
+                        "sec_bldg": "SSH",
+                        "sec_room": "100",
+                        "sec_room_link": "https://classrooms.uci.edu/classroomtechnology/classrooms/ssh/ssh-100"
+                      }
+                    },
+                    "sec_final": {
+                      "sec_final_date": "Jun 15",
+                      "sec_final_day": "Thu",
+                      "sec_final_time": "1:30-3:30pm"
+                    },
+                    "sec_enrollment": {
+                      "sec_max_enroll": "250",
+                      "sec_enrolled": "246",
+                      "sec_enroll_requests": "213",
+                      "sec_new_only_reserved": "34100",
+                      "sec_waitlist": "n/a",
+                      "sec_wait_cap": "0",
+                      "sec_xlist_subenrolled": "165"
+                    },
+                    "sec_restrictions": "A",
+                    "sec_books": "http://uci.bncollege.com",
+                    "sec_graded": "1",
+                    "sec_linkage": {
+                      "sec_backward_ptr": "00000",
+                      "sec_group_backward_ptr": "00000",
+                      "sec_forward_ptr": "00000",
+                      "sec_group_forward_ptr": "34101"
+                    },
+                    "sec_status": "OPEN",
+                    "sec_cross_list": { "cross_course_code": "16615" },
+                    "sec_active": "1",
+                    "sec_comment": "<p>Same as 16615 (EECS 148, Lec A).</p>"
+                  }
+                }
+              ]
+            },
+            {
+              "@dept_code": "I&C SCI",
+              "@dept_case": "I&C Sci",
+              "@dept_name": "Information and Computer Science",
+              "department_comment": "<p><b>RESTRICTIONS:</b> Most I&amp;C SCI courses will be initially RESTRICTED to majors in Donald Bren School of Information and Computer Sciences ONLY. Some courses will be additionally restricted to specific majors or level(s) of standing. <b>For restriction details and timeline:</b> <a href=\"http://www.ics.uci.edu/ugrad/sao/Course_updates.php\">http://www.ics.uci.edu/ugrad/sao/Course_updates.php</a></p>\n\t\t    <p><b>WAITLIST:</b> Students waitlisted for any ICS course should be in communication with that course's instructor to arrange for access to course materials and submission of any assignments while on the waitlist. Being on the waitlist or completing coursework DOES NOT guarantee a seat in the course.</p>\n\t\t    <p><b>DISCUSSIONS &amp; LABS:</b> Discussion and lab sections begin meeting AFTER the first lecture unless otherwise specified by the course instructor. Always check for messages from your instructors before the start of instruction.</p>\n\t\t    <p>Some lab sections are scheduled in laptop instructional labs, ICS 364A, ICS2 162, or ICS2 170. Students enrolled in these labs are required to bring a personal laptop to class meetings.</p>\n\t\t    <p><b>B or X Restricted Course:</b> Courses with a B or X restriction require an authorization code from the instructor to enroll.</p>",
+              "course": {
+                "@course_number": "139W",
+                "@course_title": "CRITICAL WRITING",
+                "course_prereq_link": "https://www.reg.uci.edu/cob/prrqcgi?term=202314&dept=I%26C%20SCI&action=view_by_term#139W",
+                "course_comment": "<p>Online offerings of I&amp;C SCI 139W (Lec C &amp; Lec D) will be restricted to add/drop by authorization code only after <b>5:00pm on April 7, 2023.</b></p>",
+                "section": [
+                  {
+                    "course_code": "35870",
+                    "sec_type": "Lec",
+                    "sec_num": "A",
+                    "sec_units": "4",
+                    "sec_instructors": { "instructor": "DENENBERG, D." },
+                    "sec_meetings": {
+                      "sec_meet": {
+                        "sec_days": "MW",
+                        "sec_time": "11:00-12:20p",
+                        "sec_bldg": "SSL",
+                        "sec_room": "270",
+                        "sec_room_link": "https://classrooms.uci.edu/classroomtechnology/classrooms/ssl/ssl-270"
+                      }
+                    },
+                    "sec_final": {
+                      "sec_final_date": "Jun 13",
+                      "sec_final_day": "Tue",
+                      "sec_final_time": "1:30-3:30pm"
+                    },
+                    "sec_enrollment": {
+                      "sec_max_enroll": "80",
+                      "sec_enrolled": "80",
+                      "sec_enroll_requests": "127",
+                      "sec_new_only_reserved": "35870",
+                      "sec_waitlist": "n/a",
+                      "sec_wait_cap": "0"
+                    },
+                    "sec_restrictions": "J and N",
+                    "sec_books": "http://uci.bncollege.com",
+                    "sec_graded": "1",
+                    "sec_linkage": {
+                      "sec_backward_ptr": "00000",
+                      "sec_group_backward_ptr": "00000",
+                      "sec_forward_ptr": "00000",
+                      "sec_group_forward_ptr": "35871"
+                    },
+                    "sec_status": "FULL",
+                    "sec_active": "1"
+                  },
+                  {
+                    "course_code": "35880",
+                    "sec_type": "Lec",
+                    "sec_num": "B",
+                    "sec_units": "4",
+                    "sec_instructors": { "instructor": "DENENBERG, D." },
+                    "sec_meetings": {
+                      "sec_meet": {
+                        "sec_days": "MW",
+                        "sec_time": "2:00- 3:20p",
+                        "sec_bldg": "SSL",
+                        "sec_room": "270",
+                        "sec_room_link": "https://classrooms.uci.edu/classroomtechnology/classrooms/ssl/ssl-270"
+                      }
+                    },
+                    "sec_final": {
+                      "sec_final_date": "Jun 14",
+                      "sec_final_day": "Wed",
+                      "sec_final_time": "10:30-12:30pm"
+                    },
+                    "sec_enrollment": {
+                      "sec_max_enroll": "80",
+                      "sec_enrolled": "80",
+                      "sec_enroll_requests": "124",
+                      "sec_new_only_reserved": "35880",
+                      "sec_waitlist": "n/a",
+                      "sec_wait_cap": "0"
+                    },
+                    "sec_restrictions": "J and N",
+                    "sec_books": "http://uci.bncollege.com",
+                    "sec_graded": "1",
+                    "sec_linkage": {
+                      "sec_backward_ptr": "35870",
+                      "sec_group_backward_ptr": "00000",
+                      "sec_forward_ptr": "00000",
+                      "sec_group_forward_ptr": "35881"
+                    },
+                    "sec_status": "FULL",
+                    "sec_active": "1"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "restriction_codes": {
+      "restriction": [
+        { "restriction_code": "A", "restriction_def": "Prerequisite required" },
+        { "restriction_code": "J", "restriction_def": "Upper-division only" },
+        { "restriction_code": "N", "restriction_def": "School major only" }
+      ]
+    }
+  }
+}

@@ -1,0 +1,258 @@
+                        UC Irvine Office of the Registrar
+                      Schedule of Classes    Monday, March 27, 2023
+
+Search Criteria:
+    Course Code Range: 34010, 34040, 35870, 35880, 34080, 33010, 34100
+    Exclude cancelled courses
+
+
+Spring Quarter, 2023      Term starts on Wednesday, March 29, 2023
+
+
+   #########################################################################
+   ###                                                                   ###
+   ###                       School of Humanities                        ###
+   ###                                                                   ###
+   ###  DROP: The deadline to drop courses in the School of Humanities   ###
+   ###  is the end of Week 2 by 5:00PM. Drops can be made in WebReg.     ###
+   ###                                                                   ###
+   ###  CHANGE: The deadline to change grade option or variable units is ###
+   ###  the end of Week 2 by 5:00PM. Changes can be made in WebReg.      ###
+   ###                                                                   ###
+   ###  ADD: The deadline to add courses in the School of Humanities is  ###
+   ###  the end of week 2 by 5:00PM. Adds can be made in WebReg.         ###
+   ###                                                                   ###
+   ###  Any exception to the add or drop deadline must be requested as   ###
+   ###  an Enrollment Exception via the online StudentAccess system      ###
+   ###  after second week for DROPs and ADDs and requires approval of    ###
+   ###  the Undergraduate Dean. For more information, please visit       ###
+   ###  http://www.humanities.uci.edu/undergrad/students/add_drop.php.   ###
+   ###                                                                   ###
+   ###  PREREQUISITES:                                                   ###
+   ###                                                                   ###
+   ###  If you satisfied prerequisites for a course at another college,  ###
+   ###  you must contact your academic counseling office to activate     ###
+   ###  your eligibility to enroll in the course. School of Humanities   ###
+   ###  majors can submit requests via the on-line Course Authorization  ###
+   ###  Form available at                                                ###
+   ###  http://www.humanities.uci.edu/undergrad/students/forms.php.      ###
+   ###                                                                   ###
+   #########################################################################
+
+       _________________________________________________________________
+
+                                   Writing
+
+        PLEASE BE ADVISED
+
+        Writing courses will have a "B" or "X" restriction starting on
+        the first day of instruction. Students will need to contact the
+        instructor to obtain an authorization code to add, drop, or
+        change the grading option for the class.
+
+        Waitlists for Writing courses will not be activated.
+
+        ADD/DROP Policy during the FIRST and SECOND week of Instruction
+        for Composition Courses.
+
+        Students who are permitted to add or drop a Writing Course after
+        the first day of instruction must obtain an authorization code
+        from the instructor of the section. Students WILL NOT be
+        authorized to add a Writing Course after week 1.
+
+        After the second week of the term students will no longer be
+        permitted to drop except through petition.
+
+        Students enrolled in Entry-Level and Lower-Division Writing
+        courses are REQUIRED TO ATTEND THE ENTIRE FIRST CLASS MEETING.
+        Enrolled students who do not show up on the first day WILL BE
+        DROPPED from the instructor's roll and their spot will be given
+        away. These students will still be required to formally drop the
+        course.
+
+        For more information about Composition courses and
+        prerequisites, visit the Program website:
+        http://www.humanities.uci.edu/comp/
+       _________________________________________________________________
+
+Writing  30        BEG POETRY WRITING
+    CCode Typ Sec Unt Instructor        Time              Place     Final                      Max     Enr      WL Req Rstr Status 
+    33010 SEM A   4   NGUYEN, L.        TuTh  9:30-10:50  SSL 117   Thu, Jun 15, 8:00-10:00am   16      16     n/a  42 A    FULL   
+                      SCHULTZ, R.                                                                                                  
+
+
+   #########################################################################
+   ###                                                                   ###
+   ###      Donald Bren School of Information and Computer Sciences      ###
+   ###                                                                   ###
+   ###  For ICS course updates, visit the ICS Course Updates webpage:    ###
+   ###                                                                   ###
+   ###  Undergraduate courses:                                           ###
+   ###  http://www.ics.uci.edu/ugrad/sao/Course_updates.php              ###
+   ###                                                                   ###
+   ###  Graduate courses: http://ics.uci.edu/grad/Course_updates.php     ###
+   ###                                                                   ###
+   ###  It is incumbent on the student to check the restriction status   ###
+   ###  and seating availability of a course before adding or attempting ###
+   ###  to make changes to their study list.                             ###
+   ###                                                                   ###
+   ###  COURSE PREREQUISITES ARE STRICTLY ENFORCED. The School of ICS    ###
+   ###  WILL DROP students who do not meet the required course. These    ###
+   ###  drops may take place at any time after grades are posted until   ###
+   ###  Friday of Week 2. Note that meeting the prerequisites for a      ###
+   ###  course does not guarantee a seat in that course.                 ###
+   ###                                                                   ###
+   ###  WAITLIST: Students waitlisted for any ICS course should be in    ###
+   ###  communication with that course's instructor to arrange for       ###
+   ###  access to course materials and submission of any assignments     ###
+   ###  while on the waitlist. Being on the waitlist or completing       ###
+   ###  coursework DOES NOT guarantee a set in the course.               ###
+   ###                                                                   ###
+   ###  DEADLINES TO ADD/DROP/CHANGE GRADE OPTION FOR ALL SCHOOL OF ICS  ###
+   ###  COURSES                                                          ###
+   ###                                                                   ###
+   ###  5:00pm on Friday of Week 1: Courses with an early deadline to    ###
+   ###  add/drop/change grade option are noted with a comment in the     ###
+   ###  Schedule of Classes. Permission from the instructor and an       ###
+   ###  authorization code will be required after Week 1 to add or drop  ###
+   ###  these courses.                                                   ###
+   ###                                                                   ###
+   ###  5:00pm on Friday of Week 2: The deadline to add/drop/change      ###
+   ###  grade option in WebReg is 5:00pm on Friday, April 14, 2023. The  ###
+   ###  Bren Schol of ICS strictly adheres to and enforces this deadline ###
+   ###  for both undergraduate and graduate courses.                     ###
+   ###                                                                   ###
+   ###  ADDING, DROPPING, OR CHANGING GRADE OPTION AFTER WEEK 2:         ###
+   ###  Students must submit an Enrollment Exception request online      ###
+   ###  through StudentAccess. Exception requests will only be approved  ###
+   ###  for extenuating and documented circumstances outside of the      ###
+   ###  student's control. For more information on ICS policies:         ###
+   ###  http://www.ics.uci.edu/ugrad/policies/Add_Drop_ChangeOption.php  ###
+   ###                                                                   ###
+   ###  GRADUATE STUDENT ENROLLMENT IN UNDERGRADUATE COURSES: Graduate   ###
+   ###  students seeking to enroll in an ICS undergraduate level course  ###
+   ###  must submit a request to ICS Undergraduate Students Affairs.     ###
+   ###  Priority for seating in undergraduate courses is given first to  ###
+   ###  undergraduate students. Unauthorized students found enrolled in  ###
+   ###  undergraduate courses WILL BE DROPPED by ICS Student Affairs.    ###
+   ###                                                                   ###
+   ###  UNDERGRADUATE ENROLLMENT IN GRADUATE COURSES: Undergraduate      ###
+   ###  students seeking to enroll in an ICS graduate level course must  ###
+   ###  obtain a written permission from the instructor before           ###
+   ###  submitting a request for an authorization to ICS Graduate        ###
+   ###  Student Affairs. Priority for seating in graduate courses is     ###
+   ###  given first to graduate students. Graduate level courses taken   ###
+   ###  as an undergraduate will not count toward a graduate degree      ###
+   ###  program.                                                         ###
+   ###                                                                   ###
+   ###  DCE CONCURRENT ENROLLMENT: Only courses that show as "OPEN" in   ###
+   ###  the Schedule of Classes may be requested. Approval of requests   ###
+   ###  is contingent on seating availability and prerequisite           ###
+   ###  eligibility. For more information:                               ###
+   ###  http://www.ics.uci.edu/ugrad/sao/Concurrent_Enrollment.php       ###
+   ###                                                                   ###
+   #########################################################################
+
+       _________________________________________________________________
+
+                              Computer Science
+
+         RESTRICTIONS: COMPSCI courses will initially be restricted to
+        majors in the Donald Bren School of Information and Computer
+        Sciences ONLY. Some courses will be additionally restricted to
+        specific majors or level(s) of standing. For restriction details
+        and timeline:
+        http://www.ics.uci.edu/ugrad/sao/Course_updates.php
+
+        WAITLIST: Students waitlisted for any ICS course should be in
+        communication with that course's instructor to arrange for
+        access to course materials and submission of any assignments
+        while on the waitlist. Being on the waitlist or completing
+        coursework DOES NOT guarantee a seat in the course.
+
+        DISCUSSION & LABS: Discussion and lab sections begin meeting
+        AFTER the first lecture unless otherwise specified by the course
+        instructor. Always check for messages from your instructors
+        before the start of instruction.
+
+        Some lab sections are scheduled in laptop instructional labs,
+        ICS 364A, ICS2 162, or ICS2 170. Students enrolled in these labs
+        are required to bring a personal laptop to class meetings.
+
+        B or X Restricted Courses: Courses with a B or X restriction
+        require an authorization code from the instructor to enroll.
+       _________________________________________________________________
+
+CompSci  111       DIGITAL IMAGE PROC
+    CCode Typ Sec Unt Instructor        Time              Place     Final                      Max     Enr      WL Req Rstr Status 
+    34010 LEC A   4   MAJUMDER, A.      Tu    5:00- 7:50p SE 101    Thu, Jun 15, 4:00-6:00pm    30      14       0  38 A    OPEN   
+
+CompSci  121       INFRMTION RETRIEVAL
+    CCode Typ Sec Unt Instructor        Time              Place     Final                      Max     Enr      WL Req Rstr Status 
+    34040 LEC A   4   KRONE MARTINS, A. MWF   9:00- 9:50  HSLH 100A Wed, Jun 14, 8:00-10:00am  250 177/237       0 332 A    OPEN   
+      ~ Same as 36150 (In4matx 141, Lec A).
+
+CompSci  125       NXT GEN SRCH SYSTMS
+    CCode Typ Sec Unt Instructor        Time              Place     Final                      Max     Enr      WL Req Rstr Status 
+    34080 LEC A   4   IBRAHIM, M.       TuTh  8:00- 9:20  SSPA 1100 Tue, Jun 13, 8:00-10:00am  120     120      17 231 A    Waitl  
+
+CompSci  132       COMPUTER NETWORKS
+    CCode Typ Sec Unt Instructor        Time              Place     Final                      Max     Enr      WL Req Rstr Status 
+    34100 LEC A   4   LI, Z.            TuTh  2:00- 3:20p SSH 100   Thu, Jun 15, 1:30-3:30pm   250 165/246     n/a 213 A    OPEN   
+      ~ Same as 16615 (EECS 148, Lec A).
+
+       _________________________________________________________________
+
+                      Information and Computer Science
+
+        RESTRICTIONS: Most I&C SCI courses will be initially RESTRICTED
+        to majors in Donald Bren School of Information and Computer
+        Sciences ONLY. Some courses will be additionally restricted to
+        specific majors or level(s) of standing. For restriction details
+        and timeline:
+        http://www.ics.uci.edu/ugrad/sao/Course_updates.php
+
+        WAITLIST: Students waitlisted for any ICS course should be in
+        communication with that course's instructor to arrange for
+        access to course materials and submission of any assignments
+        while on the waitlist. Being on the waitlist or completing
+        coursework DOES NOT guarantee a seat in the course.
+
+        DISCUSSIONS & LABS: Discussion and lab sections begin meeting
+        AFTER the first lecture unless otherwise specified by the course
+        instructor. Always check for messages from your instructors
+        before the start of instruction.
+
+        Some lab sections are scheduled in laptop instructional labs,
+        ICS 364A, ICS2 162, or ICS2 170. Students enrolled in these labs
+        are required to bring a personal laptop to class meetings.
+
+        B or X Restricted Course: Courses with a B or X restriction
+        require an authorization code from the instructor to enroll.
+       _________________________________________________________________
+
+I&C Sci  139W      CRITICAL WRITING
+      ~ Online offerings of I&C SCI 139W (Lec C & Lec D) will be restricted to
+      ~    add/drop by authorization code only after 5:00pm on April 7, 2023.
+    CCode Typ Sec Unt Instructor        Time              Place     Final                      Max     Enr      WL Req Rstr Status 
+    35870 LEC A   4   DENENBERG, D.     MW   11:00-12:20p SSL 270   Tue, Jun 13, 1:30-3:30pm    80      80     n/a 127 J&N  FULL   
+    35880 LEC B   4   DENENBERG, D.     MW    2:00- 3:20p SSL 270   Wed, Jun 14, 10:30-12:30pm  80      80     n/a 124 J&N  FULL   
+
+
+*** Total Classes Displayed: 7
+    Values in the "Enr" column like "177/237" show "section / joint" enrollment
+        totals for cross-listed courses.
+    Course "New-Only Reservations" (NOR) for new students have been turned off for this term.
+    The column headings above are defined at:
+            https://www.reg.uci.edu/help/WebSoc-Columns.shtml
+    Course textbooks link:
+            http://uci.bncollege.com
+    Building Abbreviations:
+            https://www.reg.uci.edu/uci/rooms
+    Campus map:
+            http://www.uci.edu/campusmap
+
+Restriction Codes from the 'Rst' column above:
+    A: Prerequisite required
+    J: Upper-division only
+    N: School major only

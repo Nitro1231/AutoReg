@@ -1,6 +1,6 @@
 import json
 import requests
-import xml.dom.minidom as xml
+import xmltodict
 from bs4 import BeautifulSoup
 
 
@@ -36,22 +36,22 @@ class WebSoc():
         }
 
 
-    def _parse_option(self, html: BeautifulSoup, name: str) -> list[dict]:
-        return [{e['value']: e.text.replace(u'\xa0', u'')} for e in html.find('select', {'name': name}).find_all('option')]
-
-
     def get_option_info(self) -> dict:
         text = requests.get(WEBSOC_BASE_URL).content
         html = BeautifulSoup(text, 'lxml')
+
+        def parse_option(name: str) -> list[dict]:
+            return [{e['value']: e.text.replace(u'\xa0', u'')} for e in html.find('select', {'name': name}).find_all('option')]
+
         option_info = {
             'SelectedYearTerm': html.find('select', {'name': 'YearTerm'}).find('option', selected=True)['value'],
-            'YearTerm': self._parse_option(html, 'YearTerm'),
-            'Dept': self._parse_option(html, 'Dept'),
-            'Division': self._parse_option(html, 'Division'),
-            'ClassType': self._parse_option(html, 'ClassType'),
+            'YearTerm': parse_option('YearTerm'),
+            'Dept': parse_option('Dept'),
+            'Division': parse_option('Division'),
+            'ClassType': parse_option('ClassType'),
             'Days': [None, 'MWF', 'TuTh', 'W'],
-            'FullCourses': self._parse_option(html, 'FullCourses'),
-            'CancelledCourses': self._parse_option(html, 'CancelledCourses'),
+            'FullCourses': parse_option('FullCourses'),
+            'CancelledCourses': parse_option('CancelledCourses'),
             'Submit': ['XML', 'Display Web Results', 'Display Text Results']
         }
         return option_info
@@ -72,14 +72,105 @@ class WebSoc():
         return requests.get(WEBSOC_BASE_URL, params=self._remove_none(self.options)).content
 
 
-    def get_course_info(self) -> dict:
-        # options = self.options.copy()
-        # options['Submit'] = 'XML'
-        # data = requests.get(WEBSOC_BASE_URL, params=self._remove_none(options)).content
-        data = open('./DataSamples/sample.xml', 'r').read()
-        doc = xml.parseString(data)
-        print(doc.tagName)
-        return 
+    def get_raw_xml_course_info(self) -> str:
+        options = self.options.copy()
+        options['Submit'] = 'XML'
+        return requests.get(WEBSOC_BASE_URL, params=self._remove_none(options)).content
+
+
+    def get_raw_json_course_info(self) -> dict:
+        xml_data = self.get_raw_xml_course_info()
+        return xmltodict.parse(xml_data)
+
+
+    # Known Bug:
+    # There is an error when parsing discussion classes as they don't have a final exam,
+    # but the program is still trying to parse them.
+    def get_course_info(self) -> list[dict]:
+        json_data = self.get_raw_json_course_info()['websoc_results']
+        if 'course_list' not in json_data:
+            return []
+        json_data = json_data['course_list']
+        # xml_data = open('./DataSamples/sample.xml', 'r').read()
+        # json_data = xmltodict.parse(xml_data)['websoc_results']['course_list']
+        course_list = list()
+
+        def make_list(element: any) -> list:
+            return element if type(element) == list else [element]
+
+        def iter_school(school_data: dict) -> None:
+            school_name = school_data['@school_name']
+
+            def iter_dept(dept_data: dict) -> None:
+                dept_code = dept_data['@dept_code']
+                dept_case = dept_data['@dept_case']
+                dept_name = dept_data['@dept_name']
+
+                def iter_course(course_data: dict) -> None:
+                    course_number = course_data['@course_number']
+                    course_title = course_data['@course_title']
+                    course_prereq = course_data['course_prereq_link']
+                    
+                    def iter_section(section_data: dict) -> None:
+                        meeting = section_data['sec_meetings']['sec_meet']
+                        final = section_data['sec_final']
+                        enrollment = section_data['sec_enrollment']
+                        section_info = {
+                            'code': int(section_data['course_code']),
+                            'dept': {
+                                'school': school_name,
+                                'code': dept_code,
+                                'name': dept_name
+                            },
+                            'course': {
+                                'case': dept_case,
+                                'number': course_number,
+                                'title': course_title,
+                                'type': section_data['sec_type'],
+                                'section': section_data['sec_num'],
+                                'unit': int(section_data['sec_units']),
+                                'prereq': course_prereq
+                            },
+                            'instructors': make_list(section_data['sec_instructors']['instructor']),
+                            'meeting': {
+                                'days': meeting['sec_days'],
+                                'time': meeting['sec_time'],
+                                'bldg': meeting['sec_bldg'],
+                                'room': meeting['sec_room'],
+                                'room_link': meeting['sec_room_link'],
+                            },
+                            'final': {
+                                'date': final['sec_final_date'],
+                                'day': final['sec_final_day'],
+                                'time': final['sec_final_time']
+                            },
+                            'enrollment': {
+                                'enrolled': int(enrollment['sec_enrolled']),
+                                'max': int(enrollment['sec_max_enroll'])
+                            },
+                            'waitlist': {
+                                'current': int(enrollment['sec_waitlist'] if enrollment['sec_waitlist'] != 'n/a' else 0),
+                                'max': int(enrollment['sec_wait_cap'])
+                            },
+                            'status': section_data['sec_status'],
+                            'restrictions': section_data['sec_restrictions'],
+                            'comment': section_data['sec_comment'] if 'sec_comment' in section_data else None
+                        }
+                        course_list.append(section_info)
+
+                    for section in make_list(course_data['section']):
+                        iter_section(section)
+
+                for course in make_list(dept_data['course']):
+                    iter_course(course)
+
+            for dept in make_list(school_data['department']):
+                iter_dept(dept)
+
+        for school in make_list(json_data['school']):
+            iter_school(school)
+        
+        return course_list
 
 
     def _remove_none(self, data: dict) -> dict:
@@ -90,11 +181,20 @@ class WebSoc():
         return copy
 
 
-# w = WebSoc()
+w = WebSoc()
 
-# w.set_course_codes([34010, 34040])
-# w.set_option('YearTerm', '2023-14')
-# w.set_option('Submit', 'Display Text Results')
+w.set_course_codes([34010, 34040, 35870, 35880, 34080, 33010, 34100, 34041])
+w.set_option('YearTerm', '2023-14')
+# w.set_option('Dept', 'COMPSCI')
+w.set_option('Submit', 'Display Text Results')
+
+print(w.get_websoc_request().decode('utf-8'))
+print()
+print(w.get_raw_xml_course_info().decode('utf-8'))
+print()
+print(json.dumps(w.get_raw_json_course_info()))
+print()
+print(json.dumps(w.get_course_info()))
 
 # print(w._remove_none(w.options))
 # print(w.get_websoc_request())

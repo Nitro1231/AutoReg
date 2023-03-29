@@ -91,7 +91,3 @@ class WebSocTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
-# print(w.options)
-# print(w._remove_none(w.options))
-# print(w.options)

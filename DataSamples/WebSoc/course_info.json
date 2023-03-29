@@ -1,0 +1,266 @@
+[
+  {
+    "code": 33301,
+    "dept": {
+      "school": "School of Humanities",
+      "code": "WRITING",
+      "name": "Writing"
+    },
+    "course": {
+      "case": "Writing",
+      "number": "60",
+      "title": "ARGUMENT & RESEARCH",
+      "type": "Sem",
+      "section": "A",
+      "unit": "4",
+      "prereq": "https://www.reg.uci.edu/cob/prrqcgi?term=202314&dept=WRITING&action=view_by_term#60"
+    },
+    "instructors": ["ATAMDEDE, A."],
+    "meeting": [
+      {
+        "days": "MWF",
+        "time": "10:00-10:50",
+        "bldg": "ALP",
+        "room": "2700",
+        "room_link": "https://classrooms.uci.edu/classroomtechnology/classrooms/alp/alp-2700"
+      }
+    ],
+    "final": { "date": null, "day": null, "time": null },
+    "enrollment": { "enrolled": 23, "max": 23 },
+    "waitlist": { "current": 0, "max": 0 },
+    "status": "FULL",
+    "restrictions": "A",
+    "comment": ""
+  },
+  {
+    "code": 34050,
+    "dept": {
+      "school": "Donald Bren School of Information and Computer Sciences",
+      "code": "COMPSCI",
+      "name": "Computer Science"
+    },
+    "course": {
+      "case": "CompSci",
+      "number": "122A",
+      "title": "INTRO TO DATA MGMT",
+      "type": "Lec",
+      "section": "A",
+      "unit": "4",
+      "prereq": "https://www.reg.uci.edu/cob/prrqcgi?term=202314&dept=COMPSCI&action=view_by_term#122A"
+    },
+    "instructors": ["WONG-MA, J."],
+    "meeting": [
+      {
+        "days": "TuTh",
+        "time": "11:00-12:20p",
+        "bldg": "HIB",
+        "room": "100",
+        "room_link": "https://classrooms.uci.edu/classroomtechnology/classrooms/hib/hib-100"
+      }
+    ],
+    "final": { "date": "Jun 13", "day": "Tue", "time": "10:30-12:30pm" },
+    "enrollment": { "enrolled": 180, "max": 180 },
+    "waitlist": { "current": 22, "max": 36 },
+    "status": "Waitl",
+    "restrictions": "A",
+    "comment": "Same as 16580 (EECS 116, Lec A)."
+  },
+  {
+    "code": 34053,
+    "dept": {
+      "school": "Donald Bren School of Information and Computer Sciences",
+      "code": "COMPSCI",
+      "name": "Computer Science"
+    },
+    "course": {
+      "case": "CompSci",
+      "number": "122A",
+      "title": "INTRO TO DATA MGMT",
+      "type": "Dis",
+      "section": "A1",
+      "unit": "0",
+      "prereq": "https://www.reg.uci.edu/cob/prrqcgi?term=202314&dept=COMPSCI&action=view_by_term#122A"
+    },
+    "instructors": ["STAFF", "WONG-MA, J."],
+    "meeting": [
+      {
+        "days": "M",
+        "time": "3:00- 3:50p",
+        "bldg": "ALP",
+        "room": "2600",
+        "room_link": "https://classrooms.uci.edu/classroomtechnology/classrooms/alp/alp-2600"
+      }
+    ],
+    "final": { "date": null, "day": null, "time": null },
+    "enrollment": { "enrolled": 60, "max": 60 },
+    "waitlist": { "current": 8, "max": 12 },
+    "status": "Waitl",
+    "restrictions": "A",
+    "comment": "Same as 16583 (EECS 116, Dis A3)."
+  },
+  {
+    "code": 34080,
+    "dept": {
+      "school": "Donald Bren School of Information and Computer Sciences",
+      "code": "COMPSCI",
+      "name": "Computer Science"
+    },
+    "course": {
+      "case": "CompSci",
+      "number": "125",
+      "title": "NXT GEN SRCH SYSTMS",
+      "type": "Lec",
+      "section": "A",
+      "unit": "4",
+      "prereq": "https://www.reg.uci.edu/cob/prrqcgi?term=202314&dept=COMPSCI&action=view_by_term#125"
+    },
+    "instructors": ["IBRAHIM, M."],
+    "meeting": [
+      {
+        "days": "TuTh",
+        "time": "8:00- 9:20",
+        "bldg": "SSPA",
+        "room": "1100",
+        "room_link": "https://classrooms.uci.edu/classroomtechnology/classrooms/sspa/sspa-1100"
+      }
+    ],
+    "final": { "date": "Jun 13", "day": "Tue", "time": "8:00-10:00am" },
+    "enrollment": { "enrolled": 120, "max": 120 },
+    "waitlist": { "current": 18, "max": 18 },
+    "status": "FULL",
+    "restrictions": "A",
+    "comment": ""
+  },
+  {
+    "code": 34100,
+    "dept": {
+      "school": "Donald Bren School of Information and Computer Sciences",
+      "code": "COMPSCI",
+      "name": "Computer Science"
+    },
+    "course": {
+      "case": "CompSci",
+      "number": "132",
+      "title": "COMPUTER NETWORKS",
+      "type": "Lec",
+      "section": "A",
+      "unit": "4",
+      "prereq": "https://www.reg.uci.edu/cob/prrqcgi?term=202314&dept=COMPSCI&action=view_by_term#132"
+    },
+    "instructors": ["LI, Z."],
+    "meeting": [
+      {
+        "days": "TuTh",
+        "time": "2:00- 3:20p",
+        "bldg": "SSH",
+        "room": "100",
+        "room_link": "https://classrooms.uci.edu/classroomtechnology/classrooms/ssh/ssh-100"
+      }
+    ],
+    "final": { "date": "Jun 15", "day": "Thu", "time": "1:30-3:30pm" },
+    "enrollment": { "enrolled": 246, "max": 250 },
+    "waitlist": { "current": 0, "max": 0 },
+    "status": "OPEN",
+    "restrictions": "A",
+    "comment": "Same as 16615 (EECS 148, Lec A)."
+  },
+  {
+    "code": 34220,
+    "dept": {
+      "school": "Donald Bren School of Information and Computer Sciences",
+      "code": "COMPSCI",
+      "name": "Computer Science"
+    },
+    "course": {
+      "case": "CompSci",
+      "number": "147",
+      "title": "IOT SW AND SYSTEMS",
+      "type": "Lec",
+      "section": "A",
+      "unit": "4",
+      "prereq": "https://www.reg.uci.edu/cob/prrqcgi?term=202314&dept=COMPSCI&action=view_by_term#147"
+    },
+    "instructors": ["GAGO MASAGUE, S."],
+    "meeting": [
+      {
+        "days": "TuTh",
+        "time": "9:30-10:50",
+        "bldg": "SH",
+        "room": "134",
+        "room_link": "https://classrooms.uci.edu/classroomtechnology/classrooms/sh/sh-134"
+      }
+    ],
+    "final": { "date": "Jun 15", "day": "Thu", "time": "8:00-10:00am" },
+    "enrollment": { "enrolled": 75, "max": 75 },
+    "waitlist": { "current": 11, "max": 12 },
+    "status": "Waitl",
+    "restrictions": "A",
+    "comment": ""
+  },
+  {
+    "code": 34222,
+    "dept": {
+      "school": "Donald Bren School of Information and Computer Sciences",
+      "code": "COMPSCI",
+      "name": "Computer Science"
+    },
+    "course": {
+      "case": "CompSci",
+      "number": "147",
+      "title": "IOT SW AND SYSTEMS",
+      "type": "Lab",
+      "section": "2",
+      "unit": "0",
+      "prereq": "https://www.reg.uci.edu/cob/prrqcgi?term=202314&dept=COMPSCI&action=view_by_term#147"
+    },
+    "instructors": ["STAFF", "GAGO MASAGUE, S."],
+    "meeting": [
+      {
+        "days": "F",
+        "time": "12:00-12:50p",
+        "bldg": "ICS",
+        "room": "192",
+        "room_link": "ICS"
+      }
+    ],
+    "final": { "date": null, "day": null, "time": null },
+    "enrollment": { "enrolled": 37, "max": 37 },
+    "waitlist": { "current": 5, "max": 6 },
+    "status": "Waitl",
+    "restrictions": "A",
+    "comment": ""
+  },
+  {
+    "code": 34270,
+    "dept": {
+      "school": "Donald Bren School of Information and Computer Sciences",
+      "code": "COMPSCI",
+      "name": "Computer Science"
+    },
+    "course": {
+      "case": "CompSci",
+      "number": "162",
+      "title": "FORMAL LANG & AUTM",
+      "type": "Lec",
+      "section": "A",
+      "unit": "4",
+      "prereq": "https://www.reg.uci.edu/cob/prrqcgi?term=202314&dept=COMPSCI&action=view_by_term#162"
+    },
+    "instructors": ["SHINDLER, M."],
+    "meeting": [
+      {
+        "days": "MWF",
+        "time": "10:00-10:50",
+        "bldg": "ALP",
+        "room": "2300",
+        "room_link": "https://classrooms.uci.edu/classroomtechnology/classrooms/alp/alp-2300"
+      }
+    ],
+    "final": { "date": "Jun 12", "day": "Mon", "time": "10:30-12:30pm" },
+    "enrollment": { "enrolled": 190, "max": 249 },
+    "waitlist": { "current": 0, "max": 38 },
+    "status": "OPEN",
+    "restrictions": "A",
+    "comment": "Same as 65130 (LSCI 102, Lec A)."
+  }
+]

@@ -1,7 +1,9 @@
+import re
 import json
 import requests
 import xmltodict
 from bs4 import BeautifulSoup
+from collections import defaultdict
 
 
 WEBSOC_BASE_URL = 'https://www.reg.uci.edu/perl/WebSoc/'
@@ -41,7 +43,7 @@ class WebSoc():
         html = BeautifulSoup(text, 'lxml')
 
         def parse_option(name: str) -> list[dict]:
-            return [{e['value']: e.text.replace(u'\xa0', u'')} for e in html.find('select', {'name': name}).find_all('option')]
+            return [(e['value'], e.text.replace(u'\xa0', u'')) for e in html.find('select', {'name': name}).find_all('option')]
 
         option_info = {
             'SelectedYearTerm': html.find('select', {'name': 'YearTerm'}).find('option', selected=True)['value'],
@@ -64,7 +66,7 @@ class WebSoc():
             raise AssertionError(f'WebSoc.set_option: "{key}" is not a valid option.')
 
 
-    def set_course_codes(self, codes: list[int]) -> None:
+    def set_course_codes(self, codes: set[int]) -> None:
         self.set_option('CourseCodes', ', '.join([str(c) for c in codes]))
 
 
@@ -83,62 +85,54 @@ class WebSoc():
         return xmltodict.parse(xml_data)
 
 
-    # Known Bug:
-    # There is an error when parsing discussion classes as they don't have a final exam,
-    # but the program is still trying to parse them.
     def get_course_info(self) -> list[dict]:
         json_data = self.get_raw_json_course_info()['websoc_results']
-        if 'course_list' not in json_data:
-            return []
+        if 'course_list' not in json_data: return []
         json_data = json_data['course_list']
-        # xml_data = open('./DataSamples/sample.xml', 'r').read()
-        # json_data = xmltodict.parse(xml_data)['websoc_results']['course_list']
         course_list = list()
 
         def make_list(element: any) -> list:
             return element if type(element) == list else [element]
 
-        def iter_school(school_data: dict) -> None:
-            school_name = school_data['@school_name']
+        def make_defdict_list(element: any) -> list:
+            if type(element) == list:
+                return [defaultdict(lambda: None, e) for e in element]
+            else:
+                return [defaultdict(lambda: None, element)]
+        
+        def safe_get(dictionary: dict, key: str, default_value: any) -> any:
+            return dictionary[key] if key in dictionary else default_value
 
-            def iter_dept(dept_data: dict) -> None:
-                dept_code = dept_data['@dept_code']
-                dept_case = dept_data['@dept_case']
-                dept_name = dept_data['@dept_name']
-
-                def iter_course(course_data: dict) -> None:
-                    course_number = course_data['@course_number']
-                    course_title = course_data['@course_title']
-                    course_prereq = course_data['course_prereq_link']
-                    
-                    def iter_section(section_data: dict) -> None:
-                        meeting = section_data['sec_meetings']['sec_meet']
-                        final = section_data['sec_final']
-                        enrollment = section_data['sec_enrollment']
+        for school in make_defdict_list(json_data['school']):
+            for dept in make_defdict_list(school['department']):
+                for course in make_defdict_list(dept['course']):
+                    for section in make_defdict_list(course['section']):
+                        final = defaultdict(lambda: None, section['sec_final'] if 'sec_final' in section else {})
+                        enrollment = section['sec_enrollment']
                         section_info = {
-                            'code': int(section_data['course_code']),
+                            'code': int(section['course_code']),
                             'dept': {
-                                'school': school_name,
-                                'code': dept_code,
-                                'name': dept_name
+                                'school': school['@school_name'],
+                                'code': dept['@dept_code'],
+                                'name': dept['@dept_name']
                             },
                             'course': {
-                                'case': dept_case,
-                                'number': course_number,
-                                'title': course_title,
-                                'type': section_data['sec_type'],
-                                'section': section_data['sec_num'],
-                                'unit': int(section_data['sec_units']),
-                                'prereq': course_prereq
+                                'case': dept['@dept_case'],
+                                'number': course['@course_number'],
+                                'title': course['@course_title'],
+                                'type': section['sec_type'],
+                                'section': section['sec_num'],
+                                'unit': section['sec_units'],
+                                'prereq': safe_get(course, 'course_prereq_link', '')
                             },
-                            'instructors': make_list(section_data['sec_instructors']['instructor']),
-                            'meeting': {
-                                'days': meeting['sec_days'],
-                                'time': meeting['sec_time'],
-                                'bldg': meeting['sec_bldg'],
-                                'room': meeting['sec_room'],
-                                'room_link': meeting['sec_room_link'],
-                            },
+                            'instructors': make_list(section['sec_instructors']['instructor']),
+                            'meeting': [{
+                                'days': meet['sec_days'],
+                                'time': meet['sec_time'],
+                                'bldg': meet['sec_bldg'],
+                                'room': meet['sec_room'],
+                                'room_link': meet['sec_room_link'],
+                            } for meet in make_list(section['sec_meetings']['sec_meet'])],
                             'final': {
                                 'date': final['sec_final_date'],
                                 'day': final['sec_final_day'],
@@ -149,27 +143,14 @@ class WebSoc():
                                 'max': int(enrollment['sec_max_enroll'])
                             },
                             'waitlist': {
-                                'current': int(enrollment['sec_waitlist'] if enrollment['sec_waitlist'] != 'n/a' else 0),
+                                'current': int(enrollment['sec_waitlist']) if not (enrollment['sec_waitlist'] == 'n/a' or 'off' in enrollment['sec_waitlist']) else 0,
                                 'max': int(enrollment['sec_wait_cap'])
                             },
-                            'status': section_data['sec_status'],
-                            'restrictions': section_data['sec_restrictions'],
-                            'comment': section_data['sec_comment'] if 'sec_comment' in section_data else None
+                            'status': section['sec_status'],
+                            'restrictions': section['sec_restrictions'],
+                            'comment': self._remove_tags(safe_get(section, 'sec_comment', ''))
                         }
                         course_list.append(section_info)
-
-                    for section in make_list(course_data['section']):
-                        iter_section(section)
-
-                for course in make_list(dept_data['course']):
-                    iter_course(course)
-
-            for dept in make_list(school_data['department']):
-                iter_dept(dept)
-
-        for school in make_list(json_data['school']):
-            iter_school(school)
-        
         return course_list
 
 
@@ -181,22 +162,16 @@ class WebSoc():
         return copy
 
 
-w = WebSoc()
+    def _remove_tags(self, text: str) -> str:
+        pattern = re.compile('<.*?>')
+        return re.sub(pattern, '', text)
 
-w.set_course_codes([34010, 34040, 35870, 35880, 34080, 33010, 34100, 34041])
-w.set_option('YearTerm', '2023-14')
-# w.set_option('Dept', 'COMPSCI')
-w.set_option('Submit', 'Display Text Results')
 
-print(w.get_websoc_request().decode('utf-8'))
-print()
-print(w.get_raw_xml_course_info().decode('utf-8'))
-print()
-print(json.dumps(w.get_raw_json_course_info()))
-print()
-print(json.dumps(w.get_course_info()))
+    def save_file(self, text: str, filename: str) -> None:
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.write(text)
 
-# print(w._remove_none(w.options))
-# print(w.get_websoc_request())
 
-# print(str(w.get_option_info()).replace(',', '\n'))
+    def save_json(self, src: dict, filename: str) -> None:
+        with open(filename, 'w', encoding='utf-8') as f:
+            json.dump(src, f)

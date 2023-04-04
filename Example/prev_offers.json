@@ -1,0 +1,110 @@
+{
+  "CompSci 125 - NXT GEN SRCH SYSTMS": {
+    "2023": ["Spring Quarter", "Winter Quarter"],
+    "2021": ["Winter Quarter"],
+    "2020": ["Winter Quarter"],
+    "2019": ["Winter Quarter"],
+    "2018": ["Winter Quarter"]
+  },
+  "CompSci 134 - COMP&NETWRK SECURTY": {
+    "2023": ["Spring Quarter"],
+    "2022": ["Fall Quarter"],
+    "2021": ["Fall Quarter"],
+    "2020": ["Fall Quarter", "Spring Quarter"],
+    "2019": ["Fall Quarter", "Spring Quarter"],
+    "2018": ["Winter Quarter"]
+  },
+  "CompSci 145 - EMBEDDED SOFTWARE": {
+    "2023": ["Spring Quarter", "Winter Quarter"],
+    "2022": ["Spring Quarter", "Winter Quarter"],
+    "2021": ["Spring Quarter", "Winter Quarter"],
+    "2020": ["Spring Quarter", "Winter Quarter"],
+    "2019": ["Spring Quarter", "Winter Quarter"],
+    "2018": ["Spring Quarter", "Winter Quarter"]
+  },
+  "CompSci 147 - IOT SW AND SYSTEMS": {
+    "2023": ["Spring Quarter"],
+    "2022": ["Spring Quarter"],
+    "2021": ["Spring Quarter"],
+    "2020": ["Fall Quarter"],
+    "2019": ["Fall Quarter"]
+  },
+  "CompSci 175 - PROJECT IN AI": {
+    "2023": ["Spring Quarter", "Winter Quarter"],
+    "2022": ["Fall Quarter", "Spring Quarter", "Winter Quarter"],
+    "2021": ["Fall Quarter", "Spring Quarter", "Winter Quarter"],
+    "2020": ["Fall Quarter", "Spring Quarter", "Winter Quarter"],
+    "2019": ["Fall Quarter", "Spring Quarter", "Winter Quarter"],
+    "2018": ["Spring Quarter", "Winter Quarter"]
+  },
+  "CompSci 178 - MACHINE/DATA MINING": {
+    "2023": ["Spring Quarter", "Winter Quarter"],
+    "2022": ["Fall Quarter", "Spring Quarter", "Winter Quarter"],
+    "2021": ["Fall Quarter", "Spring Quarter", "Winter Quarter"],
+    "2020": ["Fall Quarter", "Spring Quarter", "Winter Quarter"],
+    "2019": ["Fall Quarter", "Winter Quarter"],
+    "2018": ["Fall Quarter", "Winter Quarter"],
+    "2017": ["Fall Quarter"]
+  },
+  "CompSci 163 - GRAPH ALGORITHMS": {
+    "2022": ["Fall Quarter", "Winter Quarter"],
+    "2021": ["Winter Quarter"],
+    "2020": ["Winter Quarter"],
+    "2019": ["Winter Quarter"],
+    "2018": ["Spring Quarter"]
+  },
+  "CompSci 169 - INTRO OPTIMIZATION": {
+    "2022": ["Fall Quarter"],
+    "2021": ["Fall Quarter"],
+    "2020": ["Fall Quarter"],
+    "2019": ["Fall Quarter"],
+    "2018": ["Fall Quarter"],
+    "2017": ["Fall Quarter"]
+  },
+  "CompSci 183 - INTRO COMP BIOLOGY": {
+    "2022": ["Fall Quarter"],
+    "2021": ["Fall Quarter"],
+    "2020": ["Fall Quarter"],
+    "2018": ["Fall Quarter"],
+    "2017": ["Fall Quarter"]
+  },
+  "CompSci 184A - AI IN BIO AND MED": {
+    "2022": ["Fall Quarter"],
+    "2021": ["Fall Quarter"],
+    "2020": ["Fall Quarter"]
+  },
+  "CompSci 145L - EMBEDD SOFTWARE LAB": {
+    "2022": ["Spring Quarter", "Winter Quarter"],
+    "2021": ["Spring Quarter", "Winter Quarter"],
+    "2020": ["Spring Quarter", "Winter Quarter"],
+    "2019": ["Spring Quarter", "Winter Quarter"],
+    "2018": ["Spring Quarter", "Winter Quarter"]
+  },
+  "CompSci 184C - COMPUTATNL SYS BIO": {
+    "2022": ["Spring Quarter"],
+    "2021": ["Spring Quarter"],
+    "2020": ["Spring Quarter"],
+    "2018": ["Spring Quarter"]
+  },
+  "CompSci 166 - QUANTUM COMP & INFO": {
+    "2022": ["Winter Quarter"],
+    "2021": ["Winter Quarter"]
+  },
+  "CompSci 184A - ALGRTHMS FOR MOLBIO": { "2019": ["Fall Quarter"] },
+  "Bio Sci 93 - DNA TO ORGANISMS": {
+    "2022": ["Fall Quarter"],
+    "2021": ["Fall Quarter"],
+    "2020": ["Fall Quarter"],
+    "2019": ["Fall Quarter"],
+    "2018": ["Fall Quarter"],
+    "2017": ["Fall Quarter"]
+  },
+  "Bio Sci H93 - HON DNA TO ORGANSMS": {
+    "2022": ["Fall Quarter"],
+    "2021": ["Fall Quarter"],
+    "2020": ["Fall Quarter"],
+    "2019": ["Fall Quarter"],
+    "2018": ["Fall Quarter"],
+    "2017": ["Fall Quarter"]
+  }
+}

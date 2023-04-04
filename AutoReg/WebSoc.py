@@ -66,7 +66,11 @@ class WebSoc():
             raise AssertionError(f'WebSoc.set_option: "{key}" is not a valid option.')
 
 
-    def set_course_codes(self, codes: set[int]) -> None:
+    def set_course_numbers(self, nums: set[str or int]) -> None:
+        self.set_option('CourseNum', ', '.join([str(c) for c in nums]))
+
+
+    def set_course_codes(self, codes: set[str or int]) -> None:
         self.set_option('CourseCodes', ', '.join([str(c) for c in codes]))
 
 
@@ -99,7 +103,7 @@ class WebSoc():
                 return [defaultdict(lambda: None, e) for e in element]
             else:
                 return [defaultdict(lambda: None, element)]
-        
+
         def safe_get(dictionary: dict, key: str, default_value: any) -> any:
             return dictionary[key] if key in dictionary else default_value
 
@@ -143,8 +147,8 @@ class WebSoc():
                                 'max': int(enrollment['sec_max_enroll'])
                             },
                             'waitlist': {
-                                'current': int(enrollment['sec_waitlist']) if not (enrollment['sec_waitlist'] == 'n/a' or 'off' in enrollment['sec_waitlist']) else 0,
-                                'max': int(enrollment['sec_wait_cap'])
+                                'current': int(safe_get(enrollment, 'sec_waitlist', 0)) if not (safe_get(enrollment, 'sec_waitlist', 0) == 'n/a' or 'off' in safe_get(enrollment, 'sec_waitlist', 'n/a')) else 0,
+                                'max': int(safe_get(enrollment, 'sec_wait_cap', 0))
                             },
                             'status': section['sec_status'],
                             'restrictions': section['sec_restrictions'],

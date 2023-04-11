@@ -4,9 +4,7 @@ import urllib3
 import requests
 
 
-WEBREG_STARTUP_URL = 'https://www.reg.uci.edu/cgi-bin/webreg-redirect.sh'
 WEBREG_BASE_URL = 'https://webreg{}.reg.uci.edu/cgi-bin/wramia'
-DUO_VERSION = 2.8
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
@@ -14,11 +12,13 @@ class WebReg():
     def __init__(self) -> None:
         self.session = requests.Session()
         self.session.verify = False
+        self.active = False
+        self.url = None
 
 
     def login(self, UCInetID: str, password: str) -> bool:
         # Initializing WebReg login session.
-        redirect = self.session.get(WEBREG_STARTUP_URL)
+        redirect = self.session.get('https://www.reg.uci.edu/cgi-bin/webreg-redirect.sh')
         startup = self.session.get(redirect.url)
 
         # Parsing WebReg session info.
@@ -44,7 +44,7 @@ class WebReg():
         auth_params = {
             'tx': init_json['sig_request'].split(':APP')[0],
             'parent': duo_url,
-            'v': DUO_VERSION
+            'v': 2.8
         }
         auth = self.session.post(auth_url + '/frame/web/v1/auth?', params=auth_params)
         sid = urllib.parse.unquote(auth.url.split('sid=')[1])
@@ -75,12 +75,55 @@ class WebReg():
                 'sig_response': f'{success.json()["response"]["cookie"]}:APP{init_json["sig_request"].split(":APP")[1]}'
             }
             self.session.post('https://login.uci.edu/duo/duo_auth.php', data=wrapup_data)
-
-            print(f'https://webreg{self.num}.reg.uci.edu/cgi-bin/wramia?page=login?call={self.call}')
+            self.active = True
+            self.url = WEBREG_BASE_URL.format(self.num)
             return True
         else:
             print(status_json)
+            self.active = False
+            self.url = None
             return False
+
+
+    def get_webreg_request(self, data: dict) -> str:
+        # add other handlers.
+        res = self.session.post(self.url, data=data)
+        print(res.text)
+        return res.text
+
+
+    def logout(self):
+        # <div class="DivLogoutMsg">
+        data = {
+            'page': 'enrollQtrMenu',
+            'mode': 'exit',
+            'call': self.call,
+            'submit': 'Logout'
+        }
+        self.get_webreg_request(data)
+        self.active = False
+        self.url = None
+
+
+    def get_enrollment_window(self):
+        # <div class="WebRegInfoMsg" >
+        data = {
+            'page': 'enrollQtrMenu',
+            'mode': 'enrollmentWindow',
+            'call': self.call,
+            'submit': 'Enrollment Window'
+        }
+        self.get_webreg_request(data)
+
+
+    def get_fee_status(self):
+        data = {
+            'page': 'enrollQtrMenu',
+            'mode': 'feeStatus',
+            'call': self.call,
+            'submit': 'Fee Status'
+        }
+        self.get_webreg_request(data)
 
 
     def _parse_url(self, text: str) -> str:
@@ -90,6 +133,11 @@ class WebReg():
     def _get_between(self, text: str, token1: str, token2: str) -> str:
         return text.split(token1, 1)[1].split(token2)[0]
 
+# <div class="WebRegErrorMsg">
+# <div class="WebRegInfoMsg">
+# <div class="DivLogoutMsg">
 
-w = WebReg()
-w.login('ID','PW')
+# w = WebReg()
+# w.login()
+# w.get_enrollment_window()
+# w.logout()

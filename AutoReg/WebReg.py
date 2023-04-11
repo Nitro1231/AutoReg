@@ -2,6 +2,7 @@ import json
 import urllib
 import urllib3
 import requests
+from bs4 import BeautifulSoup
 
 
 WEBREG_BASE_URL = 'https://webreg{}.reg.uci.edu/cgi-bin/wramia'
@@ -75,6 +76,9 @@ class WebReg():
                 'sig_response': f'{success.json()["response"]["cookie"]}:APP{init_json["sig_request"].split(":APP")[1]}'
             }
             self.session.post('https://login.uci.edu/duo/duo_auth.php', data=wrapup_data)
+
+            print('INFO', f'NUM: {self.num}, CALL: {self.call}')
+
             self.active = True
             self.url = WEBREG_BASE_URL.format(self.num)
             return True
@@ -88,12 +92,23 @@ class WebReg():
     def get_webreg_request(self, data: dict) -> str:
         # add other handlers.
         res = self.session.post(self.url, data=data)
-        print(res.text)
+        html = BeautifulSoup(res.content, 'lxml')
+        
+        print(data['submit'])
+        for c in ['WebRegErrorMsg', 'WebRegInfoMsg', 'DivLogoutMsg']:
+            e = html.find('div', class_=c)
+            print(c, e.text.strip() if e != None else None)
+        print()
+
+        if data['submit'] == 'Study List':
+            e = html.find('table', class_='studyList')
+            print('studyList', e.text.strip() if e != None else None)
+
+        # print(res.text)
         return res.text
 
 
     def logout(self):
-        # <div class="DivLogoutMsg">
         data = {
             'page': 'enrollQtrMenu',
             'mode': 'exit',
@@ -106,7 +121,6 @@ class WebReg():
 
 
     def get_enrollment_window(self):
-        # <div class="WebRegInfoMsg" >
         data = {
             'page': 'enrollQtrMenu',
             'mode': 'enrollmentWindow',
@@ -126,6 +140,16 @@ class WebReg():
         self.get_webreg_request(data)
 
 
+    def get_study_list(self):
+        data = {
+            'page': 'enrollQtrMenu',
+            'mode': 'listSchedule',
+            'call': self.call,
+            'submit': 'Study List'
+        }
+        self.get_webreg_request(data)
+
+
     def _parse_url(self, text: str) -> str:
         return text.split('url=', 1)[1].split('">')[0]
 
@@ -133,11 +157,11 @@ class WebReg():
     def _get_between(self, text: str, token1: str, token2: str) -> str:
         return text.split(token1, 1)[1].split(token2)[0]
 
-# <div class="WebRegErrorMsg">
-# <div class="WebRegInfoMsg">
-# <div class="DivLogoutMsg">
 
+# Timeout error msg:  "Login Authorization has expired"
 # w = WebReg()
 # w.login()
 # w.get_enrollment_window()
+# w.get_fee_status()
+# w.get_study_list()
 # w.logout()

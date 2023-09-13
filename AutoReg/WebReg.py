@@ -6,6 +6,79 @@ from bs4 import BeautifulSoup
 
 
 WEBREG_BASE_URL = 'https://webreg{}.reg.uci.edu/cgi-bin/wramia'
+
+# page : mode
+PAGE_MAP = {
+    'enrollQtrMenu': [
+        {
+            'mode': 'enrollmentMenu',
+            'submit': 'Enrollment Menu'
+        },
+        {
+            'mode': 'waitlistMenu',
+            'submit': 'Wait list Menu'
+        },
+        {
+            'mode': 'enrollmentWindow',
+            'submit': 'Enrollment Window'
+        },
+        {
+            'mode': 'feeStatus',
+            'submit': 'Fee Status'
+        },
+        {
+            'mode': 'listSchedule',
+            'submit': 'Study List'
+        },
+        {
+            'mode': 'exit',
+            'submit': 'Logout'
+        }
+    ],
+    'enrollmentMenu': [
+        {
+            'mode': 'listSchedule',
+            'submit': 'Show Study List'
+        },
+        {
+            'button': 'Send Request'
+        },
+        {
+            'mode': 'waitlistMenu',
+            'submit': 'Go to Wait List Menu'
+        },
+        {
+            'mode': 'enrollQtrMenu',
+            'submit': 'Return to Main Menu'
+        },
+        {
+            'mode': 'exit',
+            'submit': 'Logout'
+        }
+    ],
+    'waitlistMenu': [
+        {
+            'mode': 'listWaitlist',
+            'submit': 'Show Wait List'
+        },
+        {
+            'button': 'Send Request'
+        },
+        {
+            'mode': 'enrollmentMenu',
+            'submit': 'Go to Enrollment Menu'
+        },
+        {
+            'mode': 'enrollQtrMenu',
+            'submit': 'Return to Main Menu'
+        },
+        {
+            'mode': 'exit',
+            'submit': 'Logout'
+        },
+    ]
+}
+
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 

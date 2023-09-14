@@ -107,7 +107,6 @@ class WebReg():
         }
         reg = self.session.post(session_url, data=reg_data) # https://login.uci.edu/ucinetid/webauth?return_url=https://webreg{}.reg.uci.edu:443/cgi-bin/wramia?page=login?call={}&info_text=Reg+Office+Home+Page&info_url=https://www.reg.uci.edu/
 
-
         # Requesting the user's DUO information and starting up the authorization session.
         duo_url = 'https://login.uci.edu' + self._parse_url(reg.text)
         init = self.session.get(duo_url)
@@ -141,7 +140,6 @@ class WebReg():
         status = self.session.post(auth_url + '/frame/status', data=status_data)
         status_json = status.json()
 
-
         if status_json['stat'] == 'OK' and status_json['response']['result'] == 'SUCCESS':
             success = self.session.post(auth_url + status_json['response']['result_url'], data={'sid': sid})
             wrapup_data = {
@@ -162,7 +160,49 @@ class WebReg():
             return False
 
 
-    def get_webreg_request(self, data: dict) -> str:
+    def logout(self):
+        data = {
+            'page': 'enrollQtrMenu',
+            'mode': 'exit',
+            'call': self.call,
+            'submit': 'Logout'
+        }
+        self._webreg_request(data)
+        self.active = False
+        self.url = None
+
+
+    def enrollment_window(self):
+        data = {
+            'page': 'enrollQtrMenu',
+            'mode': 'enrollmentWindow',
+            'call': self.call,
+            'submit': 'Enrollment Window'
+        }
+        self._webreg_request(data)
+
+
+    def fee_status(self):
+        data = {
+            'page': 'enrollQtrMenu',
+            'mode': 'feeStatus',
+            'call': self.call,
+            'submit': 'Fee Status'
+        }
+        self._webreg_request(data)
+
+
+    def study_list(self):
+        data = {
+            'page': 'enrollQtrMenu',
+            'mode': 'listSchedule',
+            'call': self.call,
+            'submit': 'Study List'
+        }
+        self._webreg_request(data)
+
+
+    def _webreg_request(self, data: dict) -> str:
         # add other handlers.
         res = self.session.post(self.url, data=data)
         html = BeautifulSoup(res.content, 'lxml')
@@ -181,60 +221,9 @@ class WebReg():
         return res.text
 
 
-    def logout(self):
-        data = {
-            'page': 'enrollQtrMenu',
-            'mode': 'exit',
-            'call': self.call,
-            'submit': 'Logout'
-        }
-        self.get_webreg_request(data)
-        self.active = False
-        self.url = None
-
-
-    def get_enrollment_window(self):
-        data = {
-            'page': 'enrollQtrMenu',
-            'mode': 'enrollmentWindow',
-            'call': self.call,
-            'submit': 'Enrollment Window'
-        }
-        self.get_webreg_request(data)
-
-
-    def get_fee_status(self):
-        data = {
-            'page': 'enrollQtrMenu',
-            'mode': 'feeStatus',
-            'call': self.call,
-            'submit': 'Fee Status'
-        }
-        self.get_webreg_request(data)
-
-
-    def get_study_list(self):
-        data = {
-            'page': 'enrollQtrMenu',
-            'mode': 'listSchedule',
-            'call': self.call,
-            'submit': 'Study List'
-        }
-        self.get_webreg_request(data)
-
-
     def _parse_url(self, text: str) -> str:
         return text.split('url=', 1)[1].split('">')[0]
 
 
     def _get_between(self, text: str, token1: str, token2: str) -> str:
         return text.split(token1, 1)[1].split(token2)[0]
-
-
-# Timeout error msg:  "Login Authorization has expired"
-# w = WebReg()
-# w.login()
-# w.get_enrollment_window()
-# w.get_fee_status()
-# w.get_study_list()
-# w.logout()

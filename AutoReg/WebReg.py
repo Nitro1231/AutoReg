@@ -130,6 +130,20 @@ class WebReg():
         self._webreg_request(data)
 
 
+    def requests_waitlist(self, mode: str, code: str | int):
+        self._navigate('waitlistMenu')
+        code = str(code)
+        data = {
+            'button': 'Send Request',
+            'mode': mode,
+            'courseCode': code,
+            'gradeOption': '',
+            'varUnits': '',
+            'authCode': '',
+        }
+        self._webreg_request(data)
+
+
     def enrollment_window(self):
         self._navigate('enrollQtrMenu')
         data = {

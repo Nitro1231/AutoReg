@@ -5,78 +5,23 @@ import requests
 from bs4 import BeautifulSoup
 
 
+STARTUP_URL = 'https://www.reg.uci.edu/cgi-bin/webreg-redirect.sh'
 WEBREG_BASE_URL = 'https://webreg{}.reg.uci.edu/cgi-bin/wramia'
-
-# page : mode
+DUO_URL = 'https://login.uci.edu/duo/duo_auth.php'
 PAGE_MAP = {
-    'enrollQtrMenu': [
-        {
-            'mode': 'enrollmentMenu',
-            'submit': 'Enrollment Menu'
-        },
-        {
-            'mode': 'waitlistMenu',
-            'submit': 'Wait list Menu'
-        },
-        {
-            'mode': 'enrollmentWindow',
-            'submit': 'Enrollment Window'
-        },
-        {
-            'mode': 'feeStatus',
-            'submit': 'Fee Status'
-        },
-        {
-            'mode': 'listSchedule',
-            'submit': 'Study List'
-        },
-        {
-            'mode': 'exit',
-            'submit': 'Logout'
-        }
-    ],
-    'enrollmentMenu': [
-        {
-            'mode': 'listSchedule',
-            'submit': 'Show Study List'
-        },
-        {
-            'button': 'Send Request'
-        },
-        {
-            'mode': 'waitlistMenu',
-            'submit': 'Go to Wait List Menu'
-        },
-        {
-            'mode': 'enrollQtrMenu',
-            'submit': 'Return to Main Menu'
-        },
-        {
-            'mode': 'exit',
-            'submit': 'Logout'
-        }
-    ],
-    'waitlistMenu': [
-        {
-            'mode': 'listWaitlist',
-            'submit': 'Show Wait List'
-        },
-        {
-            'button': 'Send Request'
-        },
-        {
-            'mode': 'enrollmentMenu',
-            'submit': 'Go to Enrollment Menu'
-        },
-        {
-            'mode': 'enrollQtrMenu',
-            'submit': 'Return to Main Menu'
-        },
-        {
-            'mode': 'exit',
-            'submit': 'Logout'
-        },
-    ]
+    'enrollQtrMenu': {
+        'enrollmentMenu': 'Enrollment Menu',
+        'waitlistMenu': 'Wait list Menu'
+    },
+    'enrollmentMenu': {
+        'waitlistMenu': 'Go to Wait List Menu',
+        'enrollQtrMenu': 'Return to Main Menu'
+    },
+    'waitlistMenu': {
+        'enrollmentMenu': 'Go to Enrollment Menu',
+        'enrollQtrMenu': 'Return to Main Menu'
+    }
+
 }
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -87,12 +32,13 @@ class WebReg():
         self.session = requests.Session()
         self.session.verify = False
         self.active = False
+        self.page = 'enrollQtrMenu'
         self.url = None
 
 
     def login(self, UCInetID: str, password: str) -> bool:
         # Initializing WebReg login session.
-        redirect = self.session.get('https://www.reg.uci.edu/cgi-bin/webreg-redirect.sh')
+        redirect = self.session.get(STARTUP_URL)
         startup = self.session.get(redirect.url)
 
         # Parsing WebReg session info.
@@ -146,7 +92,7 @@ class WebReg():
                 'return_url': f'https://webreg{self.num}.reg.uci.edu:443/cgi-bin/wramia?page=login?call={self.call}&v=2.8',
                 'sig_response': f'{success.json()["response"]["cookie"]}:APP{init_json["sig_request"].split(":APP")[1]}'
             }
-            self.session.post('https://login.uci.edu/duo/duo_auth.php', data=wrapup_data)
+            self.session.post(DUO_URL, data=wrapup_data)
 
             print('INFO', f'NUM: {self.num}, CALL: {self.call}')
 
@@ -162,9 +108,7 @@ class WebReg():
 
     def logout(self):
         data = {
-            'page': 'enrollQtrMenu',
             'mode': 'exit',
-            'call': self.call,
             'submit': 'Logout'
         }
         self._webreg_request(data)
@@ -173,40 +117,50 @@ class WebReg():
 
 
     def enrollment_window(self):
+        self._navigate('enrollQtrMenu')
         data = {
-            'page': 'enrollQtrMenu',
             'mode': 'enrollmentWindow',
-            'call': self.call,
             'submit': 'Enrollment Window'
         }
         self._webreg_request(data)
 
 
     def fee_status(self):
+        self._navigate('enrollQtrMenu')
         data = {
-            'page': 'enrollQtrMenu',
             'mode': 'feeStatus',
-            'call': self.call,
             'submit': 'Fee Status'
         }
         self._webreg_request(data)
 
 
     def study_list(self):
+        self._navigate('enrollQtrMenu')
         data = {
-            'page': 'enrollQtrMenu',
             'mode': 'listSchedule',
-            'call': self.call,
             'submit': 'Study List'
         }
         self._webreg_request(data)
 
 
+    def _navigate(self, page: str) -> None:
+        if self.page != page:
+            data = {
+                'mode': page,
+                'submit': PAGE_MAP[self.page][page]
+            }
+            self._webreg_request(data)
+
+
     def _webreg_request(self, data: dict) -> str:
+        # Update `page` and `call`
+        data['page'] = self.page
+        data['call'] = self.call
+
         # add other handlers.
         res = self.session.post(self.url, data=data)
         html = BeautifulSoup(res.content, 'lxml')
-        
+
         print(data['submit'])
         for c in ['WebRegErrorMsg', 'WebRegInfoMsg', 'DivLogoutMsg']:
             e = html.find('div', class_=c)

@@ -116,6 +116,20 @@ class WebReg():
         self.url = None
 
 
+    def requests_course(self, mode: str, code: str | int):
+        self._navigate('enrollmentMenu')
+        code = str(code)
+        data = {
+            'button': 'Send Request',
+            'mode': mode,
+            'courseCode': code,
+            'gradeOption': '',
+            'varUnits': '',
+            'authCode': '',
+        }
+        self._webreg_request(data)
+
+
     def enrollment_window(self):
         self._navigate('enrollQtrMenu')
         data = {

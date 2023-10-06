@@ -189,18 +189,24 @@ class WebReg():
         res = self.session.post(self.url, data=data)
         html = BeautifulSoup(res.content, 'lxml')
 
-        print(data['submit'])
-        for c in ['WebRegErrorMsg', 'WebRegInfoMsg', 'DivLogoutMsg']:
-            e = html.find('div', class_=c)
-            print(c, e.text.strip() if e != None else None)
-        print()
+        def parse_data(element_type: str, element_class: str) -> str:
+            e = html.find(element_type, class_=element_class)
+            return e.text.strip() if e != None else None
 
-        if data['submit'] == 'Study List':
-            e = html.find('table', class_='studyList')
-            print('studyList', e.text.strip() if e != None else None)
+        result = {
+            'WebRegErrorMsg': parse_data('div', 'WebRegErrorMsg'),
+            'WebRegInfoMsg': parse_data('div', 'WebRegInfoMsg'),
+            'DivLogoutMsg': parse_data('div', 'DivLogoutMsg'),
+            'Table': parse_data('table', 'studyList')
+        }
 
-        # print(res.text)
-        return res.text
+        self._display(result)
+        return result
+
+
+    def _display(self, result: str) -> None:
+        for k, v in result.items():
+            print(k, '\n', v, '\n')
 
 
     def _parse_url(self, text: str) -> str:

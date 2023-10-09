@@ -2,6 +2,8 @@ import json
 import urllib
 import urllib3
 import requests
+from .constants import Mode
+from .dataclass import Course
 from bs4 import BeautifulSoup
 
 
@@ -116,32 +118,17 @@ class WebReg():
         self.url = None
 
 
-    def requests_course(self, mode: str, code: str | int):
+    def requests_course(self, course: Course):
         self._navigate('enrollmentMenu')
-        code = str(code)
-        data = {
-            'button': 'Send Request',
-            'mode': mode,
-            'courseCode': code,
-            'gradeOption': '',
-            'varUnits': '',
-            'authCode': '',
-        }
-        self._webreg_request(data)
+        self._webreg_request(course.as_dict())
 
 
-    def requests_waitlist(self, mode: str, code: str | int):
+    def requests_waitlist(self, course: Course):
         self._navigate('waitlistMenu')
-        code = str(code)
-        data = {
-            'button': 'Send Request',
-            'mode': mode,
-            'courseCode': code,
-            'gradeOption': '',
-            'varUnits': '',
-            'authCode': '',
-        }
-        self._webreg_request(data)
+        assert(course.mode == Mode.ADD or course.mode == Mode.DROP)
+        data = course.as_dict()
+        del data['authCode']
+        self._webreg_request(course.as_dict())
 
 
     def enrollment_window(self):

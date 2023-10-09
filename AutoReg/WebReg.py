@@ -55,6 +55,9 @@ class WebReg():
         }
         reg = self.session.post(session_url, data=reg_data) # https://login.uci.edu/ucinetid/webauth?return_url=https://webreg{}.reg.uci.edu:443/cgi-bin/wramia?page=login?call={}&info_text=Reg+Office+Home+Page&info_url=https://www.reg.uci.edu/
 
+        if 'Invalid UCInetID or password. Please try again.' in reg.text:
+            raise ValueError('Invalid UCInetID or password. Please try again.')
+
         # Requesting the user's DUO information and starting up the authorization session.
         duo_url = 'https://login.uci.edu' + self._parse_url(reg.text)
         init = self.session.get(duo_url)

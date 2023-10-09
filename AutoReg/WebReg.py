@@ -161,19 +161,31 @@ class WebReg():
         self._webreg_request(data)
 
 
+    def wait_list(self):
+        self._navigate('waitlistMenu')
+        data = {
+            'mode': 'listWaitlist',
+            'submit': 'Show Wait List'
+        }
+        self._webreg_request(data)
+
+
     def _navigate(self, page: str) -> None:
+        print(f'Navigate from {self.page} to {page}...')
         if self.page != page:
             data = {
                 'mode': page,
                 'submit': PAGE_MAP[self.page][page]
             }
             self._webreg_request(data)
+        self.page = page
 
 
     def _webreg_request(self, data: dict) -> str:
         # Update `page` and `call`
         data['page'] = self.page
         data['call'] = self.call
+        print(data)
 
         # add other handlers.
         res = self.session.post(self.url, data=data)
@@ -191,6 +203,7 @@ class WebReg():
         }
 
         self._display(result)
+        print()
         return result
 
 

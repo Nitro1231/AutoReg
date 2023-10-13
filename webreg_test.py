@@ -10,6 +10,21 @@ print('[UCI LOGIN INFO]', user_id, user_pw)
 
 webreg = WebReg()
 webreg.login(user_id, user_pw)
+# webreg.enrollment_window()
+# webreg.fee_status()
+# webreg.study_list()
+# webreg.wait_list()
+
+webreg.requests_waitlist(Course(34070, Mode.ADD))
+webreg.wait_list()
+webreg.requests_waitlist(Course(34070, Mode.DROP))
+webreg.wait_list()
+
+# webreg.requests_course(Course(34070, Mode.ADD))
+# webreg.study_list()
+# webreg.requests_course(Course(34070, Mode.DROP))
+# webreg.study_list()
+webreg.logout()
 
 # webreg.study_list()
 # webreg.wait_list()
@@ -26,11 +41,11 @@ webreg.login(user_id, user_pw)
 # webreg.study_list()
 # webreg.wait_list()
 
-webreg.study_list()
-webreg.requests_course(Course(34040, Mode.DROP)) # CS 117
-webreg.study_list()
+# webreg.study_list()
+# webreg.requests_course(Course(34040, Mode.DROP)) # CS 117
+# webreg.study_list()
 
-webreg.logout()
+# webreg.logout()
 
 # show study list:
 #    Crse           Crse     Sec      Grd                      

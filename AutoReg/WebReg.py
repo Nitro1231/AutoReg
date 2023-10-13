@@ -4,6 +4,7 @@ import urllib3
 import requests
 from .constants import Mode
 from .dataclass import Course
+from .debug import log_request
 from bs4 import BeautifulSoup
 
 
@@ -42,6 +43,7 @@ class WebReg():
         # Initializing WebReg login session.
         redirect = self.session.get(STARTUP_URL)
         startup = self.session.get(redirect.url)
+        self._create_result(startup.content)
 
         # Parsing WebReg session info.
         session_url = self._parse_url(startup.text)
@@ -54,6 +56,8 @@ class WebReg():
             'login_button': 'Logging in'
         }
         reg = self.session.post(session_url, data=reg_data) # https://login.uci.edu/ucinetid/webauth?return_url=https://webreg{}.reg.uci.edu:443/cgi-bin/wramia?page=login?call={}&info_text=Reg+Office+Home+Page&info_url=https://www.reg.uci.edu/
+
+        self._create_result(reg.content)
 
         if 'Invalid UCInetID or password. Please try again.' in reg.text:
             raise ValueError('Invalid UCInetID or password. Please try again.')
@@ -189,27 +193,33 @@ class WebReg():
 
         # add other handlers.
         res = self.session.post(self.url, data=data)
-        html = BeautifulSoup(res.content, 'lxml')
+        return self._create_result(res.content)
+    
 
-        def parse_data(element_type: str, element_class: str) -> str:
-            e = html.find(element_type, class_=element_class)
-            return e.text.strip() if e != None else None
-
+    def _create_result(self, content: str) -> dict:
         result = {
-            'WebRegErrorMsg': parse_data('div', 'WebRegErrorMsg'),
-            'WebRegInfoMsg': parse_data('div', 'WebRegInfoMsg'),
-            'DivLogoutMsg': parse_data('div', 'DivLogoutMsg'),
-            'Table': parse_data('table', 'studyList')
+            'WebRegErrorMsg': self._parse_data(content, 'div', 'WebRegErrorMsg'),
+            'WebRegInfoMsg': self._parse_data(content, 'div', 'WebRegInfoMsg'),
+            'DivLogoutMsg': self._parse_data(content, 'div', 'DivLogoutMsg'),
+            'Table': self._parse_data(content, 'table', 'studyList')
         }
 
         self._display(result)
         print()
+
+        log_request(result)
         return result
 
 
     def _display(self, result: str) -> None:
         for k, v in result.items():
             print(k, '\n', v, '\n')
+
+
+    def _parse_data(self, content: str, element_type: str, element_class: str) -> str:
+        html = BeautifulSoup(content, 'lxml')
+        e = html.find(element_type, class_=element_class)
+        return e.text.strip() if e != None else None
 
 
     def _parse_url(self, text: str) -> str:

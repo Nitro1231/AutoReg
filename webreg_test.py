@@ -10,21 +10,31 @@ print('[UCI LOGIN INFO]', user_id, user_pw)
 
 webreg = WebReg()
 webreg.login(user_id, user_pw)
-# webreg.enrollment_window()
-# webreg.fee_status()
-# webreg.study_list()
-# webreg.wait_list()
 
-webreg.requests_waitlist(Course(34070, Mode.ADD))
+webreg.requests_waitlist(Course(34080, Mode.ADD)) # CompSci 125 NXT GEN SRCH SYSTMS
+webreg.requests_waitlist(Course(34260, Mode.ADD)) # CompSci 166 QUANTUM COMP & INFO
+
+webreg.requests_course(Course(34040, Mode.ADD)) # CompSci 121 INFRMTION RETRIEVAL
+webreg.requests_course(Course(34240, Mode.ADD)) # CompSci 163 GRAPH ALGORITHMS
+webreg.requests_course(Course(34041, Mode.ADD)) # CompSci 121 INFRMTION RETRIEVAL, Dis
+
+webreg.requests_course(Course(34010, Mode.ADD)) # CompSci 116 COMP PHOTO & VISION
+
+webreg.study_list()
 webreg.wait_list()
-webreg.requests_waitlist(Course(34070, Mode.DROP))
-webreg.wait_list()
+webreg.fee_status()
+webreg.logout()
+
+# webreg.requests_waitlist(Course(34070, Mode.ADD))
+# webreg.wait_list()
+# webreg.requests_waitlist(Course(34070, Mode.DROP))
+# webreg.wait_list()
 
 # webreg.requests_course(Course(34070, Mode.ADD))
 # webreg.study_list()
 # webreg.requests_course(Course(34070, Mode.DROP))
 # webreg.study_list()
-webreg.logout()
+# webreg.logout()
 
 # webreg.study_list()
 # webreg.wait_list()

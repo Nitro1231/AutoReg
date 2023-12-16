@@ -7,7 +7,10 @@
         "55555    - Your class was NOT DROPPED. The course code you entered is invalid. Please refer to the Schedule of Classes (SOC) to verify you are using the correct code for the correct term.",
         "34070    - Sorry, your class was not added. This course is full. No seats are available.",
         "34070    - Your class was NOT DROPPED. You are not currently enrolled in this course. We are unable to process your drop request.",
-        "N O T E - You must successfully waitlist all co-classes of a course during the same WebReg session or you will be dropped from the entire course upon logout. To remain waitlisted in this class, you must also waitlist:DIS"
+        "N O T E - You must successfully waitlist all co-classes of a course during the same WebReg session or you will be dropped from the entire course upon logout. To remain waitlisted in this class, you must also waitlist:DIS",
+        "Login Authorization has expired",
+        "34040    - Sorry, your class was not added. A specific major(s) has been authorized for enrollmentin this course. Please refer to the General Catalogue to view eligibility requirements.",
+        "34041    - Sorry, your class was not added. A specific major(s) has been authorized for enrollmentin this course. Please refer to the General Catalogue to view eligibility requirements."
     ],
     "WebRegInfoMsg": [
         "Your enrollment window opens on MAY 26,'23 at 10:45 am",
@@ -15,12 +18,13 @@
         "Your fees have been received by the Cashiers Office for   FALL '23",
         "Your fees have been received by the Cashiers Office for   FALL '23",
         "0009 students are on the waiting list.",
-        "Your fees have been received by the Cashiers Office for   FALL '23"
+        "Your fees have been received by the Cashiers Office for   FALL '23",
+        "Your enrollment window opens on NOV 22,'23 at 06:00 pm",
+        "Your enrollment window opens on NOV 22,'23 at 06:00 pm",
+        "Your fees have been received by the Cashiers Office for WINTER '24",
+        "Your fees have been received by the Cashiers Office for WINTER '24"
     ],
     "DivLogoutMsg": [
-        "You are logged out.",
-        "You are logged out.",
-        "You are logged out.",
         "You are logged out."
     ],
     "Table": [
@@ -35,6 +39,12 @@
         "You have TENTATIVELY WAITLISTED                                                 \n                \n\n\n \n   Crse           Crse     Sec      Grd                           Wait List    \n   Code  Dept    Num  Typ Num Unts Opt Days   Time          Position        \n   34070 COMPSCI  122A LEC A    4.0  GR      T T   03:30-04:50          10",
         "Wait Listed Classes for   FALL '23                                              \n                \n\n\n \n   Crse           Crse     Sec      Grd                           Wait List    \n   Code  Dept    Num  Typ Num Unts Opt Days   Time          Position        \ntw 34070 COMPSCI  122A LEC A    4.0  GR      T T   03:30-04:50                  \n                                                                                \n       total units wait listed  4.0       0.0 p/np units                        \n                                                                                \n                tw = tentatively wait listed",
         "You have removed yourself from the wait list                                    \n                \n\n\n \n   Crse           Crse     Sec      Grd                           Wait List    \n   Code  Dept    Num  Typ Num Unts Opt Days   Time          Position        \n   34070 COMPSCI  122A LEC A    4.0  GR      T T   03:30-04:50",
-        "Wait Listed Classes for   FALL '23                                              \n                \n\n\n \n   Crse           Crse     Sec      Grd                           Wait List    \n   Code  Dept    Num  Typ Num Unts Opt Days   Time          Position        \nno classes                                                                      \n                                                                                \n       total units wait listed  0.0       0.0 p/np units"
+        "Wait Listed Classes for   FALL '23                                              \n                \n\n\n \n   Crse           Crse     Sec      Grd                           Wait List    \n   Code  Dept    Num  Typ Num Unts Opt Days   Time          Position        \nno classes                                                                      \n                                                                                \n       total units wait listed  0.0       0.0 p/np units",
+        "you have wait listed                                                            \n                \n\n\n \n   Crse           Crse     Sec      Grd                           Wait List    \n   Code  Dept    Num  Typ Num Unts Opt Days   Time          Position        \n   34080 COMPSCI   125 LEC   A  4.0  GR      T     05:00-07:50pm        34",
+        "you have wait listed                                                            \n                \n\n\n \n   Crse           Crse     Sec      Grd                           Wait List    \n   Code  Dept    Num  Typ Num Unts Opt Days   Time          Position        \n   34260 COMPSCI   166 LEC   A  4.0  GR     M W F  11:00-11:50           9",
+        "you have added                                                                  \n                \n\n\n \n   Crse           Crse     Sec      Grd                      \n   Code  Dept    Num  Typ Num Unts Opt Days   Time          Bldg Room\n   34240 COMPSCI   163 LEC   A  4.0  GR     M W F  02:00-02:50   HIB  100",
+        "you have added                                                                  \n                \n\n\n \n   Crse           Crse     Sec      Grd                      \n   Code  Dept    Num  Typ Num Unts Opt Days   Time          Bldg Room\n   34010 COMPSCI   116 LEC   A  4.0  GR      T T   02:00-03:20   EH   1200",
+        "Enrolled Classes for WINTER '24                                                 \n                \n\n\n \n   Crse           Crse     Sec      Grd                      \n   Code  Dept    Num  Typ Num Unts Opt Days   Time          Bldg Room\n   34010 COMPSCI   116 LEC   A  4.0  GR      T T   02:00-03:20   EH   1200      \n   34240 COMPSCI   163 LEC   A  4.0  GR     M W F  02:00-02:50   HIB  100       \n                                                                                \n          total units enrolled  8.0       0.0 p/np units",
+        "Wait Listed Classes for WINTER '24                                              \n                \n\n\n \n   Crse           Crse     Sec      Grd                           Wait List    \n   Code  Dept    Num  Typ Num Unts Opt Days   Time          Position        \n   34080 COMPSCI   125 LEC   A  4.0  GR      T     05:00-07:50pm        34      \n   34260 COMPSCI   166 LEC   A  4.0  GR     M W F  11:00-11:50           9      \n                                                                                \n       total units wait listed  8.0       0.0 p/np units"
     ]
 }

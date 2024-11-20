@@ -8,17 +8,19 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 s = requests.Session()
 
 
-def notify(title: str, text: str):
+def notifyLinux(title: str, text: str):
+    os.system(f"notify-send --expire-time=0 \"{title}\" \"{text}\"")
+
+def notifyMac(title: str, text: str):
     os.system(f'osascript -e \'display notification "{text}" with title "{title}"\'')
 
-
-def playSound(sound: str):
+def playSoundMac(sound: str):
     os.system(f'afplay /System/Library/Sounds/{sound}')
 
 
 def getCourseInfo(ids: list[str]):
     payload = {
-        'YearTerm': '2023-14',
+        'YearTerm': '2025-03',
         'ShowFinals': 'on',
         'Breadth': 'ANY',
         'Dept': 'ALL',
@@ -38,15 +40,15 @@ def getCourseInfo(ids: list[str]):
         return ''
 
 
-while True:    
-    text = getCourseInfo(['34050', '34080'])
+while True:
+    text = getCourseInfo(['34340'])
 
     print(text)
 
     if 'OPEN' in text:
         print('There is a spot available!')
-        notify('Open Course Found!', 'There is a spot available!')
-        playSound('Ping.aiff')
+        notifyLinux('Open Course Found!', 'There is a spot available!')
+        # optionally, add playSound()
     else:
         print('No spot available... :(')
     time.sleep(20)
